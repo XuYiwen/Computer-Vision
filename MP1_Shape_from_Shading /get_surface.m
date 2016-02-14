@@ -19,6 +19,7 @@ function  height_map = get_surface(surface_normals, method)
             r_init = repmat(r_init,[h,1]);
             dr(1,:) = zeros(1,w);
             height_map = r_init + cumsum(dr,1);
+            return;
         case 'average'
             c_init = cumsum(dr(:,1),1);
             c_init = repmat(c_init,[1,w]);
@@ -31,6 +32,7 @@ function  height_map = get_surface(surface_normals, method)
             height_map = r_init + cumsum(dr,1);
             height_map = height_map + c_init + cumsum(dc,2);
             height_map = height_map.*0.5;
+            return;
         case 'random'
             height_map = zeros(h,w);
             map = zeros(h,w);
@@ -59,7 +61,8 @@ function  height_map = get_surface(surface_normals, method)
                 height_map = height_map +map;
             end
             height_map = height_map./time;
-        case 'fix-random'
+            return;
+        case 'onedim-random'
             times = 20;
             height_map = zeros(h,w);
             for t = 1:times
@@ -75,6 +78,7 @@ function  height_map = get_surface(surface_normals, method)
                 height_map = height_map+r_init + cum;
             end
             height_map = height_map./times;
+            return;
     end
 
 end

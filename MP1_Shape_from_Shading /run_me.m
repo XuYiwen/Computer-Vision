@@ -2,11 +2,12 @@
 %% Arun Mallya and Svetlana Lazebnik
 
 % path to the folder and subfolder
-close all, clear ,clc;
+close all,clear ,clc;
 root_path = 'croppedyale/';
-subject_name = 'yaleB07';
+subject_name = 'yaleB01';
 
-integration_method = 'fix-random'; % 'column', 'row', 'average', 'random'
+integration_method = {'column', 'row', 'average', 'random','onedim-random'};
+% integration_method = {'column'};
 
 save_flag = 0; % whether to save output images
 
@@ -28,13 +29,17 @@ end
 [albedo_image, surface_normals] = photometric_stereo(imarray, light_dirs);
 
 %% reconstruct height map
-height_map = get_surface(surface_normals, integration_method);
-
-%% display albedo and surface
-display_output(albedo_image, height_map);
-
-%% plot surface normal
-plot_surface_normals(surface_normals);
+for i = 1:size(integration_method)
+    
+    tstart = tic;
+    height_map = get_surface(surface_normals, integration_method{i});
+    t_end = toc(tstart);
+    time{i} = t_end;
+    
+    display_output(albedo_image, height_map,true,integration_method{i});
+    plot_surface_normals(surface_normals,true);
+end
+% time
 
 %% save output (optional) -- note that negative values in the normal images will not save correctly!
 if save_flag
