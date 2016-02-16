@@ -4,10 +4,10 @@
 % path to the folder and subfolder
 close all,clear ,clc;
 root_path = 'croppedyale/';
-subject_name = 'yaleB01';
+subject_name = 'yaleB05';
 
-integration_method = {'column', 'row', 'average', 'random','onedim-random'};
-% integration_method = {'column'};
+% integration_method = {'column', 'row', 'average', 'random','onedim-random'};
+integration_method = {'column'};
 
 save_flag = 0; % whether to save output images
 

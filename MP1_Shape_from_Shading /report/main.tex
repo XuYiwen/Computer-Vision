@@ -161,21 +161,36 @@ Comparison between 'Column' and 'One dimensional Random' shown in Figure \ref{fi
 % --------------------------------------------------------
 \section{Discussion}
 \subsection{Violate of Assumption}
-There are Shape from shading method based on the assumption that pixel value of pictures follows Lambert's law of diffuse reflection. In the diffusive reflection,light should be reflected equally in all directions and independent of viewing direction. 
-
-However,such assumption is not satisfied with the image input.Take subjects 1 as an illustration. Human skin is not a perfect object of diffuse reflection due to oils in the face. Numbers of input image actually contains huge amount of specular reflection which is much brighter than diffuse reflection and dependent on viewing directions, such as images shown in Figure \ref{fig:vio}. Those specular reflection might cause that area much higher than it supposed to be. So generally nose with specular light looks higher.
-
-Also, the change of facial expression also have something to do with the final accuracy since the person is not always stable.In addition, eyebrow parts also create problems because they are furry and somehow eliminate the reflecting lights. In the model, therefore eyebrow more likely to be concave parts.
+Shade from shading method based on several basic assumptioons, which will cast problems to reconstructed map if those assumptions are not fulfilled. Also some practical issue during facial data collection process might also has issues with poor mesh quality. Those model assumptions violation and practical issues might include:
 
 \begin{figure}[h!]
 \centering
-\subfigure[Nose]{\includegraphics[width= 0.32\textwidth]{imgs/1vio.jpg}}
-\subfigure[Front head]{\includegraphics[width= 0.32\linewidth]{imgs/2vio.jpg}}
-\subfigure[Change expression]{\includegraphics[width= 0.32\linewidth]{imgs/3vio.jpg}}
+\subfigure[oil Nose\label{oil}]{\includegraphics[height = 1.2in]{imgs/1vio.jpg}}
+\subfigure[Blink Eye\label{blink}]{\includegraphics[height = 1.2in]{imgs/3vio.jpg}}
+\subfigure[Hair shading\label{hair}]{\includegraphics[height = 1.2in]{imgs/1.jpg}}
+\subfigure[Image alising\label{ali}]{\includegraphics[height = 1.2in]{imgs/2.jpg}}
 \caption{Sample images of violation\label{fig:vio}}
 \end{figure}
 
-As for using subset to improve quality of face, I tried with several subset of images getting rid of problematic images but no significant improvement is found, though.
+\begin{enumerate}
+\item \emph{Assumption: Face can be seen as a lambertian object.}  In the diffusive reflection, light should be reflected equally in all directions and independent of viewing direction. Face contains areas that cannot always be simplifed as only diffuse reflection happens, such as oily nose tip, front head and eyes, like \ref{oil}. The reflection model in those part are most likely to be a specular reflection. On the other hand, furry parts also create a issue because they block out the reflective lights and seems dark in all directions which is the same as a hole.In the model, therefore eyebrow more likely to be concave parts. And if some hair is floating in front of face, that might also cause problems, like \ref{hair}.
+
+\item \emph{Assumption: Exact same camera configration and object settings}.  Camera settings are usually very controllable but object is not that easy to be overall stable. It is obvious people's face various over time, like blinking eyes, shift position and so on, like  \ref{blink}.
+
+\item \emph{Assumption: Image collected is accurate.} It is actually a common sense that a camera cannot capture facial details very well when the amount of light comming in is extremely limited like \ref{oil}. For shady parts it is more likely to be noise in height map. And actually, when looking into the datasets I found not all the pictures are perfectly shot but some imaging artifacts exist such as alising in \ref{ali}. Those might be contributes to noise as well.
+\end{enumerate}
+
+\begin{figure}[h!]
+\centering
+\subfigure[Original Set]{\includegraphics[width= 0.42\textwidth]{imgs/5a1.png}}
+\subfigure[Side View: Original]{\includegraphics[width= 0.42\textwidth]{imgs/5a2.png}}
+\subfigure[Subset]{\includegraphics[width= 0.42\textwidth]{imgs/5d1.png}}
+\subfigure[Side View: Subset]{\includegraphics[width= 0.42\textwidth]{imgs/5d2.png}}
+\caption{Subset compare\label{fig:sub}}
+\end{figure}
+
+In hope of having better results by elimating photos seem to have artifacts on final results on Subject 5. The original dataset is size of 64 and was reduced to size of 35, 40 or 50. I tried with several subset of images getting rid of problematic images but no significant improvement is found, though. Except for the chin problem is better which probably means noise is less. See below Figure \ref{fig:sub}.
+
 % --------------------------------------------------------
 \begin{thebibliography}{12}
 \bibitem{nano3}
