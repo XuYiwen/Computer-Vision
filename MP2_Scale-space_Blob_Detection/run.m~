@@ -1,0 +1,20 @@
+%% Setup environment and read test image
+close all; clear; clc;
+img_id = 1;
+img_addr = ['imgs/', sprintf('%02d',img_id), '.jpg'];
+
+img = im2double(rgb2gray(imread(img_addr)));
+[h,w,~] = size(img);
+figure(),imshow(img);
+
+%% Upsampling Kernel Size
+% - filter with odd width?
+% Settings
+sigma = 2;                      % Initial Sigma Size
+maxreg = 50;                    % Max Region to Detect
+n = 15;                          % Iterative Times
+k = nthroot(maxreg/sqrt(2),n);  % Kernel Factor
+display = true;                 % Show plots
+
+% [img_space,sig_space] = up_kernel(img,sigma,k,n,display);
+[img_space,sig_space] = sub_figure(img,sigma,k,n,display);
