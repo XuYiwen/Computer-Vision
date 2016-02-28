@@ -5,10 +5,10 @@ function [img_space,scl_space] = sub_figure(img,sigma,k,n,display)
     
     t_start = tic;
     lap = fspecial('log',7*sigma,sigma);
+    nor_lap = lap.*(sigma^2);
     for i = 1:n
         ims = imresize(img,1/scl_space(i),'Antialiasing',true);
-%         nor_lap = lap.*(sigma^2); %? whether need
-        imf = imfilter(ims,lap,'symmetric');
+        imf = imfilter(ims,nor_lap,'symmetric');
         imf = imf.^2;
         imu = imresize(imf,[h,w],'bicubic');
 
@@ -16,11 +16,12 @@ function [img_space,scl_space] = sub_figure(img,sigma,k,n,display)
         scl_space(i+1) = scl_space(i)*k;
     end
     t = toc(t_start);
-    sprintf('Running Time - Upsampled Kernel: %6.6f s',t)
+    fprintf('Running Time - Subsampled Image: %6.6f s\n',t);
 
     
     if display
         figure(3),title('Filtered image at diff levels');
+        set(gcf,'position',[1 500 1800 500]);
         per_row = ceil(n/2);
         for i = 1:n
             subplot(2,per_row,i),imagesc(img_space(:,:,i));

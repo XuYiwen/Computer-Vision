@@ -15,13 +15,15 @@ function [img_space,scl_space] = up_kernel(img,sigma,k,n,display)
         scl_space(i+1) = sigma; % actually you dont need this 
     end
     t = toc(t_start);
-    sprintf('Running Time - Upsampled Kernel: %6.6f s',t)
+    fprintf('Running Time - Upsampled Kernel: %6.6f s\n',t);
 
     if display
         figure(2),title('Filtered image at diff levels');
+        set(gcf,'position',[1 1 1800 500]);
+        
         per_row = ceil(n/2);
         for i = 1:n
-            subplot(2,per_row,i),imagesc(img_space(:,:,i));
+            subplot(2,per_row,i),imshow(img_space(:,:,i));
         end
     end
     
