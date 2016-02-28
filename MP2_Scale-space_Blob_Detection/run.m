@@ -1,12 +1,12 @@
 %% Setup environment and read in images
 close all; clear; clc;
 
-img_id = 1;
+img_id = 4;
 sigma_id =  {2,     2,      2,      2};
-maxR_id =   {50,    50,     50,     50};
+maxR_id =   {50,    60,     55,     55};
 n_id =      {10,    10,     10,     10};
-rad_id =    {2,     2,      2,      2};
-pct_id =    {0.03,  0.03,   0.03,   0.03};
+rad_id =    {2,     2,      2,      3};
+pct_id =    {0.03,  0.03,   0.12,   0.15};
 
 img_addr = ['imgs/', sprintf('%02d',img_id), '.jpg'];
 img = im2double(rgb2gray(imread(img_addr)));

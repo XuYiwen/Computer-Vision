@@ -24,7 +24,7 @@ function [img_space,scl_space] = up_kernel(img,sigma,k,n,display)
         
         per_row = ceil(n/2);
         for i = 1:n
-            subplot(2,per_row,i),imshow(img_space(:,:,i));
+            subplot(2,per_row,i),imagesc(img_space(:,:,i));
         end
     end
     
