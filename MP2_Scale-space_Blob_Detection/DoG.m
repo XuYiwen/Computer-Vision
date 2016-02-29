@@ -1,34 +1,46 @@
-function [img_space,scl_space] = DoG(img,ini_sig,maxR,perlayer,display)
-    [h,w,~] = size(img); 
+function [img_space,scl_space] = DoG(img,sigma,maxR,s,display)
+    [h,w] = size(img); 
     
     % Calculate numbers of octave
     num_oct = 0;
+    ini_sig = sigma;
     while (maxR/sqrt(2) > ini_sig*(2^num_oct)) 
         num_oct = num_oct+1;   
     end
         
-    img_space = zeros(h,w,n*perlayer);
-    scl_space = zeros(n*perlayer,1);scl_space(1) = ini_sig;
+    img_space = zeros(h,w,n*s);
+    scl_space = zeros(n*s,1);scl_space(1) = ini_sig;
     
     t_start = tic;
+    gau_sig = fspecial('gaussian',ini_sig*6,ini_sig);
+    ini_img = imfilter(img,gau_sig,'symmetric');
     for i = 1:num_oct
-        sc = 2^(i-1);
-        this_oct = zeros(h,w)
-        for j = 1:perlayer
-            
-        end
-    end
-    
-    sig = ini_sig;
-    for i = 1:n
-        lap = fspecial('log',6*sig,sig);
-        nor_lap = lap.*(sig^2);
-        imf = imfilter(img,nor_lap,'symmetric');
-        imf = imf.^2;
-        sig = round(ini_sig*(k^i));
+        % initial gaussian image stack
+        [subh,subw] = [h,w]./(2^(i-1));
+        gimg_stack = zeros(subh, subw, s+1);
+        gimg_stack(:,:,1) = ini_img;
         
-        img_space(:,:,i) = imf;
-        scl_space(i+1) = sig; % actually you dont need this 
+        % initial step guassian
+        k = nthroot(2,s);
+        gau_k = fspecial('gaussian',k*6,k);
+        
+        for j = 1:s
+            % compute upper layer of guassian-ed image
+            last = gimg_stack(:,:,j);
+            next = imfilter(last,gau_k,'symmetric');
+            gimg_stack(:,:,j+1) = next;
+            
+            % substract and put into DoG stack
+            DoG = next - last;
+            DoG = imresize(DoG,[h,w],'bicubic');
+            img_space(:,:,i) = DoG;
+            scl_space(:,:,i) = ini_sig * k^(j-1);
+        end
+        
+        % update new ini_sig and ini_img
+        ini_sig = 2*ini_sig;
+        gau_sig = fspecial('gaussian',ini_sig*6,ini_sig);
+        ini_img = imfilter(img,gau_sig,'symmetric');  
     end
     t = toc(t_start);
     fprintf('Running Time - Upsampled Kernel: %6.6f s\n',t);
