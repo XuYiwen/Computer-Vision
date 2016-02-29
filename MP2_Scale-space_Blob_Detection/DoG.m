@@ -1,9 +1,24 @@
-function [img_space,scl_space] = DoG(img,ini_sig,k,n,display)
+function [img_space,scl_space] = DoG(img,ini_sig,maxR,perlayer,display)
     [h,w,~] = size(img); 
-    img_space = zeros(h,w,n);
-    scl_space = zeros(n,1);scl_space(1) = ini_sig;
+    
+    % Calculate numbers of octave
+    num_oct = 0;
+    while (maxR/sqrt(2) > ini_sig*(2^num_oct)) 
+        num_oct = num_oct+1;   
+    end
+        
+    img_space = zeros(h,w,n*perlayer);
+    scl_space = zeros(n*perlayer,1);scl_space(1) = ini_sig;
     
     t_start = tic;
+    for i = 1:num_oct
+        sc = 2^(i-1);
+        this_oct = zeros(h,w)
+        for j = 1:perlayer
+            
+        end
+    end
+    
     sig = ini_sig;
     for i = 1:n
         lap = fspecial('log',6*sig,sig);

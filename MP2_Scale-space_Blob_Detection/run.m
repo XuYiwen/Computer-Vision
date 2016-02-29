@@ -17,7 +17,7 @@ img = im2double(rgb2gray(imread(img_addr)));
 sigma = sigma_id{img_id};                           % Initial Sigma Size
 maxR = maxR_id{img_id};                             % Max Region to Detect
 n = n_id{img_id};                                   % Iterative Times
-spc_mtd = 'sub';                                    % Method: 'sub', 'upk', 'dog'
+spc_mtd = 'dog';                                    % Method: 'sub', 'upk', 'dog'
 k = nthroot(maxR/sqrt(2)/sigma,n);                  % Kernel Factor
 display = true;                                     % Show plots
 
@@ -26,7 +26,7 @@ if (strcmp(spc_mtd,'upk'))
 elseif (strcmp(spc_mtd,'sub')) 
     [img_space,scl_space] = sub_figure(img,sigma,k,n,display);
 elseif (strcmp(spc_mtd,'dog'))
-    [img_space,scl_space] = DoG(img,sigma,k,n,display);
+    [img_space,scl_space] = DoG(img,sigma,maxR,3,display);
 else error('Wrong Method');  
 end
 
@@ -41,7 +41,7 @@ th = pct * max(img_space(:));                       % Threshold response
 maxi_space = img_space;
 sz = 2*rad+1;
 t_start = tic;
-for i = 1:n
+for i = 1:size(img_space,3)
 	if (strcmp(maxi_mtd,'ordfilt2')) 
         maxi_space(:,:,i) = ordfilt2(img_space(:,:,i),sz^2,ones(sz));
     elseif (strcmp(maxi_mtd,'colfilt')) 
