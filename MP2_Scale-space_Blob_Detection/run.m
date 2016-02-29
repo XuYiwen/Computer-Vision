@@ -17,7 +17,7 @@ img = im2double(rgb2gray(imread(img_addr)));
 sigma = sigma_id{img_id};                           % Initial Sigma Size
 maxR = maxR_id{img_id};                             % Max Region to Detect
 n = n_id{img_id};                                   % Iterative Times
-spc_mtd = 'sub';
+spc_mtd = 'sub';                                    % Method: 'sub', 'upk', 'dog'
 k = nthroot(maxR/sqrt(2)/sigma,n);                  % Kernel Factor
 display = true;                                     % Show plots
 
@@ -25,6 +25,8 @@ if (strcmp(spc_mtd,'upk'))
     [img_space,scl_space] = up_kernel(img,sigma,k,n,display);
 elseif (strcmp(spc_mtd,'sub')) 
     [img_space,scl_space] = sub_figure(img,sigma,k,n,display);
+elseif (strcmp(spc_mtd,'dog'))
+    [img_space,scl_space] = DoG(img,sigma,k,n,display);
 else error('Wrong Method');  
 end
 
