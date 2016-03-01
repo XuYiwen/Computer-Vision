@@ -19,12 +19,12 @@ function [img_space,scl_space] = up_kernel(img,sigma,k,n,display)
     fprintf('Running Time - Upsampled Kernel: %6.6f s\n',t);
 
     if display
-        figure(2),title('Filtered image at diff levels');
+        figure(2);
         set(gcf,'position',[1 1 1800 500]);
         
         per_row = ceil(n/2);
         for i = 1:n
-            subplot(2,per_row,i),imagesc(img_space(:,:,i));
+            subplot(2,per_row,i),imagesc(img_space(:,:,i)),axis off,colorbar;
         end
     end
     

@@ -17,7 +17,7 @@ img = im2double(rgb2gray(imread(img_addr)));
 sigma = sigma_id{img_id};                           % Initial Sigma Size
 maxR = maxR_id{img_id};                             % Max Region to Detect
 n = n_id{img_id};                                   % Iterative Times
-spc_mtd = 'dog';                                    % Method: 'sub', 'upk', 'dog'
+spc_mtd = 'upk';                                    % Method: 'sub', 'upk', 'dog'
 k = nthroot(maxR/sqrt(2)/sigma,n);                  % Kernel Factor
 display = true;                                     % Show plots
 
