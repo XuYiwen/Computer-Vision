@@ -56,7 +56,7 @@ fprintf('Running Time - %s: %6.6f s\n',maxi_mtd,t);
 
 % Third Dimension Nonmaximum Suppression
 x =[]; y = []; r = [];
-for i = 1:n
+for i = 1:size(img_space,3)
     cur = maxi_space(:,:,i);
     cur_up = ones(size(cur)); cur_down = ones(size(cur));
     if (i>1) up = maxi_space(:,:,i-1); cur_up = (cur-up)>0; end

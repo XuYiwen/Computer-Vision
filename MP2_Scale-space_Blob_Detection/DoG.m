@@ -8,21 +8,22 @@ function [img_space,scl_space] = DoG(img,sigma,maxR,s,display)
         num_oct = num_oct+1;   
     end
         
-    img_space = zeros(h,w,n*s);
-    scl_space = zeros(n*s,1);scl_space(1) = ini_sig;
+    img_space = zeros(h,w,num_oct*s);
+    scl_space = zeros(num_oct*s,1);scl_space(1) = ini_sig;
     
     t_start = tic;
+    
+    % intialization
+    subh = h; subw = w;
     gau_sig = fspecial('gaussian',ini_sig*6,ini_sig);
-    ini_img = imfilter(img,gau_sig,'symmetric');
+    ini_img = imfilter(img,gau_sig,'symmetric');   
+    k = nthroot(2,s)
+    gau_k = fspecial('gaussian',ceil(k*6),k);  
+    
     for i = 1:num_oct
         % initial gaussian image stack
-        [subh,subw] = [h,w]./(2^(i-1));
         gimg_stack = zeros(subh, subw, s+1);
         gimg_stack(:,:,1) = ini_img;
-        
-        % initial step guassian
-        k = nthroot(2,s);
-        gau_k = fspecial('gaussian',k*6,k);
         
         for j = 1:s
             % compute upper layer of guassian-ed image
@@ -38,14 +39,16 @@ function [img_space,scl_space] = DoG(img,sigma,maxR,s,display)
         end
         
         % update new ini_sig and ini_img
-        ini_sig = 2*ini_sig;
-        gau_sig = fspecial('gaussian',ini_sig*6,ini_sig);
-        ini_img = imfilter(img,gau_sig,'symmetric');  
+        subh = ceil(h/(2^i));
+        subw = ceil(w/(2^i));
+        ini_img = imresize(gimg_stack(:,:,end),[subh,subw]);
+        ini_img = imfilter(ini_img,gau_sig,'symmetric');  
     end
     t = toc(t_start);
-    fprintf('Running Time - Upsampled Kernel: %6.6f s\n',t);
+    fprintf('Running Time - DoG: %6.6f s\n',t);
 
     if display
+        n = num_oct*s;
         figure(2),title('Filtered image at diff levels');
         set(gcf,'position',[1 1 1800 500]);
         
