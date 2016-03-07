@@ -8,7 +8,6 @@ function [img_space,scl_space] = sub_figure(img,sigma,k,n)
     nor_lap = lap.*(sigma^2);
     sig = 1;
     for i = 1:n
-%         ims = imresize(img,1/sig);
         ims = imresize(img,[ceil(h/sig),ceil(w/sig)]);
         imf = imfilter(ims,nor_lap,'symmetric');
         imf = imf.^2;
