@@ -1,40 +1,55 @@
 %% Setup environment and read in images
-close all; clear; clc;
+close all; clear;
 
 img_id = 1;
-sigma_id =  {2,     2,      2,      2};
-maxR_id =   {55,    60,     55,     55};
-n_id =      {10,    10,     10,     10};
-rad_id =    {2,     2,      2,      3};
-pct_id =    {0.04,  0.03,   0.12,   0.15};
+sigma_id =  {2,     2,      2,      2,      2,      2,      2,      2};
+maxR_id =   {55,    60,     55,     55,     40,     55,     80,     50};
+n_id =      {12,    12,     12,     12,     12,     12,     12,     12};
+rad_id =    {2,     2,      2,      3,      3,      2,      2,      2};
+pct_id =    {0.4,  0.03,   0.12,   0.15,   0.1,    0.11,   0.1,    0.05};
 
+fprintf('Image - %d\n',img_id);
 img_addr = ['imgs/', sprintf('%02d',img_id), '.jpg'];
 img = im2double(rgb2gray(imread(img_addr)));
 [h,w,~] = size(img);
 
-%% Upsampling Kernel Size
+%% Cascade Laplacian Filtering 
 % Settings
 sigma = sigma_id{img_id};                           % Initial Sigma Size
 maxR = maxR_id{img_id};                             % Max Region to Detect
 n = n_id{img_id};                                   % Iterative Times
-spc_mtd = 'dog';                                    % Method: 'sub', 'upk', 'dog'
+spc_mtd = 'sub';                                    % Method: 'sub', 'upk'
 k = nthroot(maxR/sqrt(2)/sigma,n);                  % Kernel Factor
 display = true;                                     % Show plots
 
 if (strcmp(spc_mtd,'upk'))
-    [img_space,scl_space] = up_kernel(img,sigma,k,n,display);
+    [img_space,scl_space] = up_kernel(img,sigma,k,n);
 elseif (strcmp(spc_mtd,'sub')) 
-    [img_space,scl_space] = sub_figure(img,sigma,k,n,display);
-elseif (strcmp(spc_mtd,'dog'))
-    [img_space,scl_space] = DoG(img,sigma,maxR,3,display);
+    [img_space,scl_space] = sub_figure(img,sigma,k,n);
 else error('Wrong Method');  
+end
+
+if display
+    figure(3);
+    set(gcf,'position',[1 500 1600 700]);
+    num = size(img_space,3);
+    row_num = 3;
+    per_row = ceil(num/row_num);
+    for i = 1:num
+        subplot(row_num,per_row,i),imagesc(img_space(:,:,i)),axis off, colorbar;
+    end
+    
+    fig = gcf;
+    fig.PaperPositionMode = 'auto';
+    capture = ['out/', sprintf('%s-%02d',spc_mtd,img_id)];
+    print(capture,'-dpng','-r0');
 end
 
 %% Nonmaximun Suppression and Scale-fitting
 % Settings
 rad = rad_id{img_id};                               % Radius in Nonmaximum suppression(1~3);
 pct = pct_id{img_id};                               % Threshold in max precentage
-maxi_mtd = 'ordfilt2';                              % Method: 'ordfilt2', 'colfilt', 'nlfilter'
+maxi_mtd = 'colfilt';                              % Method: 'ordfilt2', 'colfilt', 'nlfilter'
 th = pct * max(img_space(:));                       % Threshold response
 
 % Slidewise Nonmaximum Suppression
@@ -73,3 +88,7 @@ for i = 1:size(img_space,3)
     x = [x;cx]; y = [y;cy]; r = [r;cr];
 end
 figure(4),show_all_circles(img, y, x, r);
+fig = gcf;
+fig.PaperPositionMode = 'auto';
+capture = ['out/', sprintf('out-%s-%02d',spc_mtd,img_id)];
+print(capture,'-dpng','-r0');
