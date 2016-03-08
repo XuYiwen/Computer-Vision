@@ -3,10 +3,10 @@ close all; clear;
 
 img_id = 1;
 sigma_id =  {2,     2,      2,      2,      2,      2,      2,      2};
-maxR_id =   {55,    60,     55,     55,     40,     55,     80,     50};
+maxR_id =   {50,    60,     55,     55,     40,     55,     80,     50};
 n_id =      {12,    12,     12,     12,     12,     12,     12,     12};
 rad_id =    {2,     2,      2,      3,      3,      2,      2,      2};
-pct_id =    {0.4,  0.03,   0.12,   0.15,   0.1,    0.11,   0.1,    0.05};
+pct_id =    {0.04,  0.03,   0.12,   0.15,   0.1,    0.11,   0.1,    0.05};
 
 fprintf('Image - %d\n',img_id);
 img_addr = ['imgs/', sprintf('%02d',img_id), '.jpg'];
@@ -21,11 +21,14 @@ n = n_id{img_id};                                   % Iterative Times
 spc_mtd = 'sub';                                    % Method: 'sub', 'upk'
 k = nthroot(maxR/sqrt(2)/sigma,n);                  % Kernel Factor
 display = true;                                     % Show plots
+nOctLayers = 3;
 
 if (strcmp(spc_mtd,'upk'))
     [img_space,scl_space] = up_kernel(img,sigma,k,n);
 elseif (strcmp(spc_mtd,'sub')) 
     [img_space,scl_space] = sub_figure(img,sigma,k,n);
+elseif (strcmp(spc_mtd,'dog')) 
+    [img_space,scl_space] = DoG(img,sigma,maxR,nOctLayers);
 else error('Wrong Method');  
 end
 
@@ -35,6 +38,7 @@ if display
     num = size(img_space,3);
     row_num = 3;
     per_row = ceil(num/row_num);
+%     per_row = 6;
     for i = 1:num
         subplot(row_num,per_row,i),imagesc(img_space(:,:,i)),axis off, colorbar;
     end
@@ -71,7 +75,8 @@ fprintf('Running Time - %s: %6.6f s\n',maxi_mtd,t);
 
 % Third Dimension Nonmaximum Suppression
 x =[]; y = []; r = [];
-for i = 1:size(img_space,3)
+n = size(img_space,3);
+for i = 1:n
     cur = maxi_space(:,:,i);
     cur_up = ones(size(cur)); cur_down = ones(size(cur));
     if (i>1) up = maxi_space(:,:,i-1); cur_up = (cur-up)>0; end
