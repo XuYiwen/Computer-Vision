@@ -1,4 +1,11 @@
 function [keypt,des] = get_feature(img,method,display,picname)
+
+    % Dimension correction 
+    if ndims(img) == 3
+        img = im2double(rgb2gray(img));
+    else
+        img = im2double(img);
+    end
     
     % detect keypoints
     thresh = 0.02;
