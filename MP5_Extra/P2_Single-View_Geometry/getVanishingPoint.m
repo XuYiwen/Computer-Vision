@@ -1,8 +1,7 @@
-function vp = getVanishingPoint(im)
+function vp = getVanishingPoint(im,dir)
 % output vanishing point, input image
-
 figure(1), hold off, imagesc(im)
-hold on 
+hold on
 
 % Allow user to input line segments; compute centers, directions, lengths
 disp('Set at least two lines for vanishing point')
@@ -85,4 +84,6 @@ end
 plot(vp(1)/vp(3), vp(2)/vp(3), '*r')
 axis image
 axis([bx1 bx2 by1 by2]); 
-
+title(['Vanishing points for ', dir,' dirction']);
+    set(gcf,'PaperPositionMode','auto');
+    print(1, sprintf('vp_%s.png',dir), '-dpng') ;
