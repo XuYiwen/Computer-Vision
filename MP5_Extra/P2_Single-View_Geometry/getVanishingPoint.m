@@ -10,7 +10,7 @@ lines = zeros(3, 0);
 line_length = zeros(1,0);
 centers = zeros(3, 0);
 while 1
-    disp(' ')
+    disp('>> ')
     disp('Click first point or q to stop')
     [x1,y1,b] = ginput(1);    
     if b=='q'        
@@ -25,39 +25,46 @@ while 1
 end
 
 %% solve for vanishing point 
-N = size(lines,2);
+
 % ignore short lines
 del = find(line_length <= 20);
 lines(:,del) = [];
 line_length(del) = [];
 centers(:,del) = [];
+N = size(lines,2);
 
 % find all vanishing point candidates
 vp_set = [];
 sc_set = [];
-for i = 1:N
+for i = 1:N-1
     for j = i+1:N
-        la = lines(:,i);
-        lb = lines(:,j);
-        
-        vp_c = cross(la,lb);
-        vp_set(end+1) = vp_c;
+        vp_c = cross(lines(:,i),lines(:,j));
+        vp_set(:,end+1) = vp_c;
     end
 end
 
-% compute
-% vp candidates to center of line
-        vp_line = cross(vp_c,center)
-        
-        % compute score for point candidates
-        theta = atan2(-la(1),la(2));
-        alpha = atan2(-l)
+% compute score for point candidates
+for n = 1:size(vp_set,2)
+   pt = vp_set(:,n);
+   
+   score(n) = 0;
+   for l = 1:size(lines,2)
+       % length of lines
+       length = line_length(l);
+       
+       % angle from vp to center
+       pt2ct = cross(pt,centers(:,l));
+       alpha = atan2(-pt2ct(1),pt2ct(2));
+       theta= atan2(-lines(1,l),lines(2,l));
+       
+       % per-line score
+       sc = abs(length)*exp(-abs(alpha-theta)/(2*0.1^2));
+       score(n) = score(n) +sc;
+   end
+end
 
-vp_all = zeros(3,N);
-for i = 1:N
-    vp_all(:,i) = cross(lines(:,(i-1)*2+1),lines(:,(i-1)*2+2));
-end 
-vp = vp_all();
+[~,ind] = max(score);
+vp = vp_set(:,ind);
 
 %% display 
 hold on
