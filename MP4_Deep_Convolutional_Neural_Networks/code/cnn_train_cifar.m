@@ -36,7 +36,7 @@ for i=1:numel(net.layers)
   net.layers{i}.filtersMomentum = zeros(size(net.layers{i}.filters), ...
     class(net.layers{i}.filters)) ;
   net.layers{i}.biasesMomentum = zeros(size(net.layers{i}.biases), ...
-    class(net.layers{i}.biases)) ; %#ok<*ZEROLIKE>
+    class(net.layers{i}.biases)) ;
   if ~isfield(net.layers{i}, 'filtersLearningRate')
     net.layers{i}.filtersLearningRate = 1 ;
   end
@@ -65,6 +65,7 @@ end
 % -------------------------------------------------------------------------
 
 rng(0) ;
+report_interval = 50;
 
 if opts.useGpu
   one = gpuArray(single(1)) ;
@@ -83,13 +84,14 @@ info.val.speed = [] ;
 
 lr = 0 ;
 res = [] ;
+
 for epoch=1:opts.numEpochs
   prevLr = lr ;
   lr = opts.learningRate(min(epoch, numel(opts.learningRate))) ;
 
   % fast-forward to where we stopped
   modelPath = @(ep) fullfile(opts.expDir, sprintf('net-epoch-%d.mat', ep));
-  modelFigPath = fullfile(opts.expDir, 'net-train.pdf') ;
+  modelFigPath = fullfile(opts.expDir, 'net-train.png') ;
 
   if opts.continue
     if exist(modelPath(epoch),'file'), continue ; end
@@ -127,8 +129,11 @@ for epoch=1:opts.numEpochs
     % get next image batch and labels
     batch = train(t:min(t+opts.batchSize-1, numel(train))) ;
     batch_time = tic ;
-    fprintf('training: epoch %02d: processing batch %3d of %3d ...', epoch, ...
-            fix(t/opts.batchSize)+1, ceil(numel(train)/opts.batchSize)) ;
+    
+    if (mod(fix(t/opts.batchSize)+1,report_interval) == 0)
+        fprintf('training: epoch %02d: processing batch %3d of %3d ...', epoch, ...
+                fix(t/opts.batchSize)+1, ceil(numel(train)/opts.batchSize)) ;
+    end
     [im, labels] = getBatch(imdb, batch,1) ;
     
     if opts.prefetch
@@ -164,18 +169,31 @@ for epoch=1:opts.numEpochs
       net.layers{l}.filters = net.layers{l}.filters + net.layers{l}.filtersMomentum ;
       net.layers{l}.biases = net.layers{l}.biases + net.layers{l}.biasesMomentum ;
       
+      if (mod(fix(t/opts.batchSize)+1,report_interval) == 0)
+          r1 = mean(net.layers{l}.filtersMomentum(:)) / mean(net.layers{l}.filters(:));
+          r2 = mean(net.layers{l}.biasesMomentum(:)) / mean(net.layers{l}.biases(:));
+          if (l == 1) 
+              fprintf('\n'); 
+          end
+          fprintf('layer %d ratio | r1: %f |r2: %f\n', l, r1/report_interval, r2/report_interval);
+      end
+      
+%       mmm = mean(res(l).x(:));
+%       fprintf('res mean %d mean %f\n',l, mmm);
+      
     end
 
     % print information
     batch_time = toc(batch_time) ;
     speed = numel(batch)/batch_time ;
     info.train = updateError(opts, info.train, net, res, batch_time) ;
-
-    fprintf(' %.2f s (%.1f images/s)', batch_time, speed) ;
-    n = t + numel(batch) - 1 ;
-    fprintf(' err %.1f err5 %.1f', ...
-      info.train.error(end)/n*100, info.train.topFiveError(end)/n*100) ;
-    fprintf('\n') ;
+    if (mod(fix(t/opts.batchSize)+1,report_interval) == 0)
+        fprintf(' %.2f s (%.1f images/s)', batch_time, speed) ;
+        n = t + numel(batch) - 1 ;
+        fprintf(' err %.1f err5 %.1f', ...
+        info.train.error(end)/n*100, info.train.topFiveError(end)/n*100) ;
+        fprintf('\n') ;
+    end
 
     % debug info
     if opts.plotDiagnostics
@@ -191,8 +209,11 @@ for epoch=1:opts.numEpochs
   for t=1:opts.batchSize:numel(val)
     batch_time = tic ;
     batch = val(t:min(t+opts.batchSize-1, numel(val))) ;
-    fprintf('validation: epoch %02d: processing batch %3d of %3d ...', epoch, ...
-            fix(t/opts.batchSize)+1, ceil(numel(val)/opts.batchSize)) ;
+    
+    if (mod(fix(t/opts.batchSize)+1,report_interval) == 0)
+        fprintf('validation: epoch %02d: processing batch %3d of %3d ...', epoch, ...
+                fix(t/opts.batchSize)+1, ceil(numel(val)/opts.batchSize)) ;
+    end
     [im, labels] = getBatch(imdb, batch , 2) ;
 
     if opts.prefetch
@@ -202,7 +223,7 @@ for epoch=1:opts.numEpochs
     if opts.useGpu
       im = gpuArray(im) ;
     end
-
+   
     net.layers{end}.class = labels;
     res = vl_simplenn(net, im, [], res, ...
       'disableDropout', true, ...
@@ -212,13 +233,15 @@ for epoch=1:opts.numEpochs
     % print information
     batch_time = toc(batch_time) ;
     speed = numel(batch)/batch_time ;
-    [info.val val_prediction_class(t:min(t+opts.batchSize-1, numel(val)))] = updateError(opts, info.val, net, res, batch_time) ;
-    fprintf(' %.2f s (%.1f images/s)', batch_time, speed) ;
-    n = t + numel(batch) - 1 ;
-    fprintf(' err %.1f err5 %.1f', ...
-      info.val.error(end)/n*100, info.val.topFiveError(end)/n*100) ;
-    fprintf('\n') ;
-       
+    
+    [info.val, val_prediction_class(t:min(t+opts.batchSize-1, numel(val)))] = updateError(opts, info.val, net, res, batch_time) ;
+    if (mod(fix(t/opts.batchSize)+1,report_interval) == 0)
+        fprintf(' %.2f s (%.1f images/s)', batch_time, speed) ;
+        n = t + numel(batch) - 1 ;
+        fprintf(' err %.1f err5 %.1f', ...
+        info.val.error(end)/n*100, info.val.topFiveError(end)/n*100) ;
+        fprintf('\n') ;
+    end      
   end
 
   
@@ -227,8 +250,10 @@ for epoch=1:opts.numEpochs
   for t=1:opts.batchSize:numel(test)
     batch_time = tic ;
     batch = test(t:min(t+opts.batchSize-1, numel(test))) ;
-    fprintf('test: epoch %02d: processing batch %3d of %3d ...', epoch, ...
+    if (mod(fix(t/opts.batchSize)+1,report_interval) == 0)
+        fprintf('test: epoch %02d: processing batch %3d of %3d ...', epoch, ...
             fix(t/opts.batchSize)+1, ceil(numel(test)/opts.batchSize)) ;
+    end
     [im] = getBatch(imdb, batch , 3) ;
 
     if opts.prefetch
@@ -249,9 +274,11 @@ for epoch=1:opts.numEpochs
     batch_time = toc(batch_time) ;
     speed = numel(batch)/batch_time ;
     [test_prediction_class(t:min(t+opts.batchSize-1, numel(test)))] = test_image_prediciton(res) ;
-    fprintf(' %.2f s (%.1f images/s)', batch_time, speed) ;
-    n = t + numel(batch) - 1 ;
-    fprintf('\n') ;
+    if (mod(fix(t/opts.batchSize)+1,report_interval) == 0)
+        fprintf(' %.2f s (%.1f images/s)', batch_time, speed);
+        n = t + numel(batch) - 1 ;
+        fprintf('\n') ;
+    end
        
   end
   
@@ -272,6 +299,8 @@ for epoch=1:opts.numEpochs
   save(modelPath(epoch), 'net', 'info') ;
 
   figure(1) ; clf ;
+  set(gcf,'position',[1 500 1500 500]);
+  set(gcf,'PaperPositionMode','auto');
   subplot(1,2,1) ;
   semilogy(1:epoch, info.train.objective, 'k') ; hold on ;
   semilogy(1:epoch, info.val.objective, 'b') ;
@@ -281,6 +310,7 @@ for epoch=1:opts.numEpochs
   set(h,'color','none');
   title('objective') ;
   subplot(1,2,2) ;
+  
   switch opts.errorType
     case 'multiclass'
       plot(1:epoch, info.train.error, 'k') ; hold on ;
@@ -299,14 +329,8 @@ for epoch=1:opts.numEpochs
   set(h,'color','none') ;
   title('error') ;
   drawnow ;
-  print(1, modelFigPath, '-dpdf') ;
-  
-  
-  
-  
-  
-  
-  
+
+  print(1, modelFigPath, '-dpng') ;
 end
 
 %% -------------------------------------------------------------------------
