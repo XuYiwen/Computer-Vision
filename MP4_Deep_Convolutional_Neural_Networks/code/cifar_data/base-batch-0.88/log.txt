@@ -1,0 +1,533 @@
+     layer|      1|      2|      3|      4|      5|      6|      7|
+      type|    cnv|  mpool|    cnv|   relu|  apool|    cnv|  sftml|
+   support|    5x5|    5x5|    7x7|    1x1|    7x7|    2x2|    1x1|
+    stride|      1|      2|      1|      1|      2|      1|      1|
+       pad|      2|0,1x0,1|      0|      0|0,1x0,1|      0|      0|
+   out dim|     32|     32|     32|     32|     32|    100|    100|
+  filt dim|      3|    n/a|     32|    n/a|    n/a|     32|    n/a|
+rec. field|      5|      9|     21|     21|     33|     37|     37|
+c/g net KB|   10/0|    0/0|  196/0|    0/0|    0/0|   50/0|    0/0|
+total network CPU/GPU memory: 0.3/0 MB
+learning rate changed (0.000000 --> 0.001000): resetting momentum
+training: epoch 01: processing batch  50 of 450 ... 0.11 s (869.9 images/s) err 98.4 err5 92.8
+training: epoch 01: processing batch 100 of 450 ... 0.11 s (881.4 images/s) err 98.4 err5 93.0
+training: epoch 01: processing batch 150 of 450 ... 0.11 s (879.3 images/s) err 98.4 err5 93.2
+training: epoch 01: processing batch 200 of 450 ... 0.11 s (871.2 images/s) err 98.4 err5 93.4
+training: epoch 01: processing batch 250 of 450 ... 0.11 s (879.0 images/s) err 98.4 err5 93.5
+training: epoch 01: processing batch 300 of 450 ... 0.12 s (852.5 images/s) err 98.4 err5 93.6
+training: epoch 01: processing batch 350 of 450 ... 0.11 s (885.0 images/s) err 98.4 err5 93.6
+training: epoch 01: processing batch 400 of 450 ... 0.11 s (870.7 images/s) err 98.5 err5 93.7
+training: epoch 01: processing batch 450 of 450 ... 0.12 s (866.5 images/s) err 98.5 err5 93.7
+validation: epoch 01: processing batch  50 of  50 ... 0.03 s (3743.4 images/s) err 98.1 err5 91.7
+test: epoch 01: processing batch  50 of 100 ... 0.03 s (3680.2 images/s)
+test: epoch 01: processing batch 100 of 100 ... 0.03 s (3633.6 images/s)
+resuming by loading epoch 1
+training: epoch 02: processing batch  50 of 450 ... 0.12 s (848.5 images/s) err 98.4 err5 92.8
+training: epoch 02: processing batch 100 of 450 ... 0.11 s (883.7 images/s) err 98.0 err5 92.2
+training: epoch 02: processing batch 150 of 450 ... 0.12 s (867.5 images/s) err 98.1 err5 92.4
+training: epoch 02: processing batch 200 of 450 ... 0.11 s (872.6 images/s) err 98.1 err5 92.5
+training: epoch 02: processing batch 250 of 450 ... 0.12 s (866.8 images/s) err 98.0 err5 92.2
+training: epoch 02: processing batch 300 of 450 ... 0.11 s (869.6 images/s) err 97.9 err5 92.1
+training: epoch 02: processing batch 350 of 450 ... 0.12 s (856.5 images/s) err 97.9 err5 92.1
+training: epoch 02: processing batch 400 of 450 ... 0.11 s (884.7 images/s) err 98.0 err5 92.2
+training: epoch 02: processing batch 450 of 450 ... 0.12 s (868.6 images/s) err 97.9 err5 92.1
+validation: epoch 02: processing batch  50 of  50 ... 0.03 s (3730.8 images/s) err 97.0 err5 89.6
+test: epoch 02: processing batch  50 of 100 ... 0.03 s (3788.2 images/s)
+test: epoch 02: processing batch 100 of 100 ... 0.03 s (3753.9 images/s)
+resuming by loading epoch 2
+training: epoch 03: processing batch  50 of 450 ... 0.11 s (885.5 images/s) err 98.2 err5 92.3
+training: epoch 03: processing batch 100 of 450 ... 0.11 s (889.6 images/s) err 98.2 err5 91.7
+training: epoch 03: processing batch 150 of 450 ... 0.11 s (882.8 images/s) err 98.0 err5 91.5
+training: epoch 03: processing batch 200 of 450 ... 0.11 s (897.3 images/s) err 97.7 err5 91.2
+training: epoch 03: processing batch 250 of 450 ... 0.11 s (886.1 images/s) err 97.6 err5 90.9
+training: epoch 03: processing batch 300 of 450 ... 0.11 s (882.0 images/s) err 97.5 err5 90.7
+training: epoch 03: processing batch 350 of 450 ... 0.11 s (883.7 images/s) err 97.4 err5 90.4
+training: epoch 03: processing batch 400 of 450 ... 0.11 s (870.6 images/s) err 97.3 err5 90.3
+training: epoch 03: processing batch 450 of 450 ... 0.11 s (892.9 images/s) err 97.2 err5 90.1
+validation: epoch 03: processing batch  50 of  50 ... 0.03 s (3928.5 images/s) err 96.2 err5 87.2
+test: epoch 03: processing batch  50 of 100 ... 0.03 s (3977.9 images/s)
+test: epoch 03: processing batch 100 of 100 ... 0.03 s (3553.6 images/s)
+resuming by loading epoch 3
+training: epoch 04: processing batch  50 of 450 ... 0.11 s (872.1 images/s) err 96.3 err5 88.2
+training: epoch 04: processing batch 100 of 450 ... 0.11 s (879.3 images/s) err 96.4 err5 88.5
+training: epoch 04: processing batch 150 of 450 ... 0.11 s (869.7 images/s) err 96.3 err5 88.1
+training: epoch 04: processing batch 200 of 450 ... 0.11 s (873.8 images/s) err 96.3 err5 88.1
+training: epoch 04: processing batch 250 of 450 ... 0.12 s (848.4 images/s) err 96.3 err5 87.9
+training: epoch 04: processing batch 300 of 450 ... 0.11 s (877.5 images/s) err 96.2 err5 87.6
+training: epoch 04: processing batch 350 of 450 ... 0.11 s (882.0 images/s) err 96.2 err5 87.5
+training: epoch 04: processing batch 400 of 450 ... 0.11 s (884.2 images/s) err 96.2 err5 87.4
+training: epoch 04: processing batch 450 of 450 ... 0.11 s (874.1 images/s) err 96.2 err5 87.3
+validation: epoch 04: processing batch  50 of  50 ... 0.03 s (3638.9 images/s) err 94.8 err5 83.2
+test: epoch 04: processing batch  50 of 100 ... 0.03 s (3702.8 images/s)
+test: epoch 04: processing batch 100 of 100 ... 0.03 s (3753.7 images/s)
+resuming by loading epoch 4
+training: epoch 05: processing batch  50 of 450 ... 0.11 s (889.4 images/s) err 95.7 err5 86.3
+training: epoch 05: processing batch 100 of 450 ... 0.11 s (890.7 images/s) err 95.9 err5 85.2
+training: epoch 05: processing batch 150 of 450 ... 0.11 s (881.0 images/s) err 95.9 err5 85.5
+training: epoch 05: processing batch 200 of 450 ... 0.11 s (883.2 images/s) err 95.8 err5 85.5
+training: epoch 05: processing batch 250 of 450 ... 0.11 s (884.0 images/s) err 95.7 err5 85.4
+training: epoch 05: processing batch 300 of 450 ... 0.12 s (860.7 images/s) err 95.8 err5 85.4
+training: epoch 05: processing batch 350 of 450 ... 0.11 s (889.2 images/s) err 95.8 err5 85.4
+training: epoch 05: processing batch 400 of 450 ... 0.11 s (872.6 images/s) err 95.8 err5 85.6
+training: epoch 05: processing batch 450 of 450 ... 0.11 s (869.9 images/s) err 95.8 err5 85.6
+validation: epoch 05: processing batch  50 of  50 ... 0.03 s (3685.2 images/s) err 93.6 err5 81.1
+test: epoch 05: processing batch  50 of 100 ... 0.03 s (3688.5 images/s)
+test: epoch 05: processing batch 100 of 100 ... 0.03 s (3692.7 images/s)
+resuming by loading epoch 5
+training: epoch 06: processing batch  50 of 450 ... 0.12 s (867.5 images/s) err 95.0 err5 84.0
+training: epoch 06: processing batch 100 of 450 ... 0.12 s (861.3 images/s) err 95.4 err5 84.9
+training: epoch 06: processing batch 150 of 450 ... 0.12 s (865.1 images/s) err 95.5 err5 85.1
+training: epoch 06: processing batch 200 of 450 ... 0.11 s (884.2 images/s) err 95.5 err5 85.0
+training: epoch 06: processing batch 250 of 450 ... 0.12 s (867.8 images/s) err 95.4 err5 84.9
+training: epoch 06: processing batch 300 of 450 ... 0.11 s (893.1 images/s) err 95.4 err5 84.9
+training: epoch 06: processing batch 350 of 450 ... 0.12 s (855.9 images/s) err 95.5 err5 84.9
+training: epoch 06: processing batch 400 of 450 ... 0.11 s (872.4 images/s) err 95.5 err5 84.9
+training: epoch 06: processing batch 450 of 450 ... 0.11 s (877.7 images/s) err 95.5 err5 85.0
+validation: epoch 06: processing batch  50 of  50 ... 0.03 s (3583.6 images/s) err 93.3 err5 80.8
+test: epoch 06: processing batch  50 of 100 ... 0.03 s (3690.1 images/s)
+test: epoch 06: processing batch 100 of 100 ... 0.03 s (3668.7 images/s)
+resuming by loading epoch 6
+training: epoch 07: processing batch  50 of 450 ... 0.11 s (880.1 images/s) err 94.2 err5 83.5
+training: epoch 07: processing batch 100 of 450 ... 0.12 s (859.1 images/s) err 94.4 err5 83.7
+training: epoch 07: processing batch 150 of 450 ... 0.11 s (881.4 images/s) err 94.4 err5 83.2
+training: epoch 07: processing batch 200 of 450 ... 0.11 s (872.4 images/s) err 94.5 err5 83.3
+training: epoch 07: processing batch 250 of 450 ... 0.11 s (885.5 images/s) err 94.5 err5 83.2
+training: epoch 07: processing batch 300 of 450 ... 0.11 s (884.5 images/s) err 94.5 err5 83.3
+training: epoch 07: processing batch 350 of 450 ... 0.11 s (880.7 images/s) err 94.4 err5 83.2
+training: epoch 07: processing batch 400 of 450 ... 0.11 s (870.7 images/s) err 94.5 err5 83.0
+training: epoch 07: processing batch 450 of 450 ... 0.11 s (878.3 images/s) err 94.4 err5 82.9
+validation: epoch 07: processing batch  50 of  50 ... 0.03 s (3714.2 images/s) err 92.0 err5 77.0
+test: epoch 07: processing batch  50 of 100 ... 0.03 s (3953.5 images/s)
+test: epoch 07: processing batch 100 of 100 ... 0.03 s (3844.0 images/s)
+resuming by loading epoch 7
+training: epoch 08: processing batch  50 of 450 ... 0.11 s (882.9 images/s) err 93.8 err5 81.1
+training: epoch 08: processing batch 100 of 450 ... 0.11 s (869.9 images/s) err 94.0 err5 81.7
+training: epoch 08: processing batch 150 of 450 ... 0.11 s (876.0 images/s) err 94.1 err5 82.0
+training: epoch 08: processing batch 200 of 450 ... 0.11 s (879.1 images/s) err 94.5 err5 82.4
+training: epoch 08: processing batch 250 of 450 ... 0.11 s (880.0 images/s) err 94.3 err5 82.2
+training: epoch 08: processing batch 300 of 450 ... 0.11 s (878.3 images/s) err 94.3 err5 82.1
+training: epoch 08: processing batch 350 of 450 ... 0.12 s (867.0 images/s) err 94.2 err5 82.0
+training: epoch 08: processing batch 400 of 450 ... 0.12 s (866.2 images/s) err 94.1 err5 81.9
+training: epoch 08: processing batch 450 of 450 ... 0.12 s (856.1 images/s) err 94.0 err5 81.7
+validation: epoch 08: processing batch  50 of  50 ... 0.03 s (3580.1 images/s) err 91.6 err5 75.8
+test: epoch 08: processing batch  50 of 100 ... 0.03 s (3686.8 images/s)
+test: epoch 08: processing batch 100 of 100 ... 0.03 s (3628.3 images/s)
+resuming by loading epoch 8
+training: epoch 09: processing batch  50 of 450 ... 0.12 s (868.2 images/s) err 93.5 err5 80.2
+training: epoch 09: processing batch 100 of 450 ... 0.11 s (879.1 images/s) err 93.5 err5 80.2
+training: epoch 09: processing batch 150 of 450 ... 0.12 s (859.1 images/s) err 93.7 err5 80.5
+training: epoch 09: processing batch 200 of 450 ... 0.12 s (866.5 images/s) err 93.6 err5 80.7
+training: epoch 09: processing batch 250 of 450 ... 0.11 s (869.7 images/s) err 93.5 err5 80.6
+training: epoch 09: processing batch 300 of 450 ... 0.12 s (865.5 images/s) err 93.4 err5 80.4
+training: epoch 09: processing batch 350 of 450 ... 0.11 s (887.1 images/s) err 93.4 err5 80.3
+training: epoch 09: processing batch 400 of 450 ... 0.11 s (872.4 images/s) err 93.3 err5 80.1
+training: epoch 09: processing batch 450 of 450 ... 0.12 s (857.3 images/s) err 93.2 err5 80.0
+validation: epoch 09: processing batch  50 of  50 ... 0.03 s (3674.0 images/s) err 90.9 err5 75.5
+test: epoch 09: processing batch  50 of 100 ... 0.03 s (3675.0 images/s)
+test: epoch 09: processing batch 100 of 100 ... 0.03 s (3637.4 images/s)
+resuming by loading epoch 9
+training: epoch 10: processing batch  50 of 450 ... 0.12 s (857.9 images/s) err 92.9 err5 79.8
+training: epoch 10: processing batch 100 of 450 ... 0.11 s (894.6 images/s) err 92.9 err5 79.0
+training: epoch 10: processing batch 150 of 450 ... 0.11 s (877.7 images/s) err 92.9 err5 79.0
+training: epoch 10: processing batch 200 of 450 ... 0.11 s (883.7 images/s) err 92.9 err5 78.8
+training: epoch 10: processing batch 250 of 450 ... 0.11 s (889.6 images/s) err 92.9 err5 79.0
+training: epoch 10: processing batch 300 of 450 ... 0.12 s (867.3 images/s) err 93.0 err5 79.0
+training: epoch 10: processing batch 350 of 450 ... 0.12 s (867.8 images/s) err 92.9 err5 78.9
+training: epoch 10: processing batch 400 of 450 ... 0.12 s (869.3 images/s) err 92.9 err5 79.0
+training: epoch 10: processing batch 450 of 450 ... 0.12 s (865.0 images/s) err 92.9 err5 79.0
+validation: epoch 10: processing batch  50 of  50 ... 0.03 s (3716.2 images/s) err 91.1 err5 73.9
+test: epoch 10: processing batch  50 of 100 ... 0.03 s (3848.8 images/s)
+test: epoch 10: processing batch 100 of 100 ... 0.03 s (3714.0 images/s)
+resuming by loading epoch 10
+learning rate changed (0.001000 --> 0.000100): resetting momentum
+training: epoch 11: processing batch  50 of 450 ... 0.11 s (874.3 images/s) err 92.8 err5 78.3
+training: epoch 11: processing batch 100 of 450 ... 0.11 s (876.9 images/s) err 92.3 err5 77.7
+training: epoch 11: processing batch 150 of 450 ... 0.11 s (877.0 images/s) err 92.0 err5 76.9
+training: epoch 11: processing batch 200 of 450 ... 0.11 s (873.2 images/s) err 92.1 err5 76.8
+training: epoch 11: processing batch 250 of 450 ... 0.11 s (878.8 images/s) err 91.9 err5 76.7
+training: epoch 11: processing batch 300 of 450 ... 0.11 s (884.9 images/s) err 91.9 err5 76.7
+training: epoch 11: processing batch 350 of 450 ... 0.12 s (865.9 images/s) err 91.8 err5 76.7
+training: epoch 11: processing batch 400 of 450 ... 0.12 s (857.0 images/s) err 91.7 err5 76.5
+training: epoch 11: processing batch 450 of 450 ... 0.11 s (885.6 images/s) err 91.7 err5 76.6
+validation: epoch 11: processing batch  50 of  50 ... 0.03 s (3677.7 images/s) err 88.6 err5 70.0
+test: epoch 11: processing batch  50 of 100 ... 0.03 s (3586.9 images/s)
+test: epoch 11: processing batch 100 of 100 ... 0.03 s (3697.6 images/s)
+resuming by loading epoch 11
+training: epoch 12: processing batch  50 of 450 ... 0.11 s (875.8 images/s) err 90.7 err5 75.3
+training: epoch 12: processing batch 100 of 450 ... 0.11 s (874.6 images/s) err 90.6 err5 75.9
+training: epoch 12: processing batch 150 of 450 ... 0.11 s (877.0 images/s) err 90.9 err5 75.6
+training: epoch 12: processing batch 200 of 450 ... 0.11 s (880.6 images/s) err 90.9 err5 75.7
+training: epoch 12: processing batch 250 of 450 ... 0.12 s (866.4 images/s) err 91.0 err5 75.8
+training: epoch 12: processing batch 300 of 450 ... 0.11 s (891.5 images/s) err 91.1 err5 75.8
+training: epoch 12: processing batch 350 of 450 ... 0.11 s (877.2 images/s) err 91.1 err5 75.7
+training: epoch 12: processing batch 400 of 450 ... 0.11 s (874.2 images/s) err 91.1 err5 75.6
+training: epoch 12: processing batch 450 of 450 ... 0.11 s (885.7 images/s) err 91.0 err5 75.6
+validation: epoch 12: processing batch  50 of  50 ... 0.03 s (3704.8 images/s) err 88.7 err5 68.9
+test: epoch 12: processing batch  50 of 100 ... 0.03 s (3761.2 images/s)
+test: epoch 12: processing batch 100 of 100 ... 0.03 s (3455.5 images/s)
+resuming by loading epoch 12
+training: epoch 13: processing batch  50 of 450 ... 0.11 s (875.8 images/s) err 91.1 err5 74.6
+training: epoch 13: processing batch 100 of 450 ... 0.12 s (869.4 images/s) err 90.9 err5 75.3
+training: epoch 13: processing batch 150 of 450 ... 0.12 s (861.4 images/s) err 90.7 err5 75.1
+training: epoch 13: processing batch 200 of 450 ... 0.11 s (887.4 images/s) err 90.8 err5 75.2
+training: epoch 13: processing batch 250 of 450 ... 0.11 s (876.2 images/s) err 90.9 err5 75.2
+training: epoch 13: processing batch 300 of 450 ... 0.11 s (875.2 images/s) err 90.9 err5 75.1
+training: epoch 13: processing batch 350 of 450 ... 0.12 s (869.3 images/s) err 91.0 err5 75.2
+training: epoch 13: processing batch 400 of 450 ... 0.11 s (872.0 images/s) err 90.9 err5 75.2
+training: epoch 13: processing batch 450 of 450 ... 0.12 s (862.8 images/s) err 90.9 err5 75.1
+validation: epoch 13: processing batch  50 of  50 ... 0.03 s (3671.0 images/s) err 88.3 err5 68.3
+test: epoch 13: processing batch  50 of 100 ... 0.03 s (3675.2 images/s)
+test: epoch 13: processing batch 100 of 100 ... 0.03 s (3676.0 images/s)
+resuming by loading epoch 13
+training: epoch 14: processing batch  50 of 450 ... 0.11 s (883.9 images/s) err 91.2 err5 75.2
+training: epoch 14: processing batch 100 of 450 ... 0.11 s (877.3 images/s) err 90.8 err5 74.3
+training: epoch 14: processing batch 150 of 450 ... 0.11 s (884.5 images/s) err 90.9 err5 74.6
+training: epoch 14: processing batch 200 of 450 ... 0.11 s (883.4 images/s) err 90.7 err5 74.6
+training: epoch 14: processing batch 250 of 450 ... 0.12 s (862.6 images/s) err 90.7 err5 74.6
+training: epoch 14: processing batch 300 of 450 ... 0.11 s (891.3 images/s) err 90.6 err5 74.6
+training: epoch 14: processing batch 350 of 450 ... 0.11 s (885.0 images/s) err 90.7 err5 74.6
+training: epoch 14: processing batch 400 of 450 ... 0.11 s (872.8 images/s) err 90.7 err5 74.6
+training: epoch 14: processing batch 450 of 450 ... 0.12 s (869.0 images/s) err 90.7 err5 74.5
+validation: epoch 14: processing batch  50 of  50 ... 0.03 s (3682.7 images/s) err 88.3 err5 68.7
+test: epoch 14: processing batch  50 of 100 ... 0.03 s (3760.9 images/s)
+test: epoch 14: processing batch 100 of 100 ... 0.03 s (3604.7 images/s)
+resuming by loading epoch 14
+training: epoch 15: processing batch  50 of 450 ... 0.11 s (890.3 images/s) err 90.6 err5 74.1
+training: epoch 15: processing batch 100 of 450 ... 0.12 s (869.2 images/s) err 90.5 err5 74.4
+training: epoch 15: processing batch 150 of 450 ... 0.12 s (865.9 images/s) err 90.6 err5 74.6
+training: epoch 15: processing batch 200 of 450 ... 0.11 s (878.0 images/s) err 90.7 err5 74.6
+training: epoch 15: processing batch 250 of 450 ... 0.11 s (886.4 images/s) err 90.8 err5 74.7
+training: epoch 15: processing batch 300 of 450 ... 0.11 s (877.9 images/s) err 90.8 err5 74.7
+training: epoch 15: processing batch 350 of 450 ... 0.11 s (872.8 images/s) err 90.7 err5 74.7
+training: epoch 15: processing batch 400 of 450 ... 0.11 s (879.4 images/s) err 90.7 err5 74.7
+training: epoch 15: processing batch 450 of 450 ... 0.12 s (867.1 images/s) err 90.7 err5 74.7
+validation: epoch 15: processing batch  50 of  50 ... 0.03 s (3649.8 images/s) err 88.4 err5 68.5
+test: epoch 15: processing batch  50 of 100 ... 0.03 s (3661.0 images/s)
+test: epoch 15: processing batch 100 of 100 ... 0.03 s (3684.2 images/s)
+resuming by loading epoch 15
+training: epoch 16: processing batch  50 of 450 ... 0.11 s (887.9 images/s) err 90.4 err5 74.3
+training: epoch 16: processing batch 100 of 450 ... 0.11 s (871.6 images/s) err 89.9 err5 74.0
+training: epoch 16: processing batch 150 of 450 ... 0.12 s (858.1 images/s) err 90.2 err5 74.2
+training: epoch 16: processing batch 200 of 450 ... 0.11 s (873.5 images/s) err 90.3 err5 74.2
+training: epoch 16: processing batch 250 of 450 ... 0.11 s (878.9 images/s) err 90.3 err5 74.3
+training: epoch 16: processing batch 300 of 450 ... 0.12 s (864.2 images/s) err 90.4 err5 74.3
+training: epoch 16: processing batch 350 of 450 ... 0.11 s (892.2 images/s) err 90.4 err5 74.2
+training: epoch 16: processing batch 400 of 450 ... 0.12 s (853.8 images/s) err 90.4 err5 74.1
+training: epoch 16: processing batch 450 of 450 ... 0.11 s (878.2 images/s) err 90.5 err5 74.1
+validation: epoch 16: processing batch  50 of  50 ... 0.03 s (3825.3 images/s) err 87.7 err5 67.5
+test: epoch 16: processing batch  50 of 100 ... 0.03 s (3647.8 images/s)
+test: epoch 16: processing batch 100 of 100 ... 0.03 s (3701.5 images/s)
+resuming by loading epoch 16
+training: epoch 17: processing batch  50 of 450 ... 0.12 s (860.3 images/s) err 90.7 err5 74.3
+training: epoch 17: processing batch 100 of 450 ... 0.12 s (869.3 images/s) err 90.6 err5 74.0
+training: epoch 17: processing batch 150 of 450 ... 0.11 s (879.3 images/s) err 90.5 err5 73.7
+training: epoch 17: processing batch 200 of 450 ... 0.12 s (858.4 images/s) err 90.4 err5 74.0
+training: epoch 17: processing batch 250 of 450 ... 0.11 s (880.4 images/s) err 90.5 err5 74.1
+training: epoch 17: processing batch 300 of 450 ... 0.11 s (878.4 images/s) err 90.5 err5 74.1
+training: epoch 17: processing batch 350 of 450 ... 0.11 s (876.3 images/s) err 90.5 err5 73.9
+training: epoch 17: processing batch 400 of 450 ... 0.11 s (890.6 images/s) err 90.4 err5 73.8
+training: epoch 17: processing batch 450 of 450 ... 0.11 s (873.2 images/s) err 90.4 err5 73.9
+validation: epoch 17: processing batch  50 of  50 ... 0.03 s (3817.9 images/s) err 87.5 err5 67.5
+test: epoch 17: processing batch  50 of 100 ... 0.03 s (3681.1 images/s)
+test: epoch 17: processing batch 100 of 100 ... 0.03 s (3656.6 images/s)
+resuming by loading epoch 17
+training: epoch 18: processing batch  50 of 450 ... 0.12 s (862.4 images/s) err 90.4 err5 72.1
+training: epoch 18: processing batch 100 of 450 ... 0.11 s (876.6 images/s) err 90.6 err5 73.2
+training: epoch 18: processing batch 150 of 450 ... 0.11 s (869.9 images/s) err 90.3 err5 73.1
+training: epoch 18: processing batch 200 of 450 ... 0.12 s (868.8 images/s) err 90.6 err5 73.4
+training: epoch 18: processing batch 250 of 450 ... 0.11 s (885.9 images/s) err 90.6 err5 73.4
+training: epoch 18: processing batch 300 of 450 ... 0.11 s (882.9 images/s) err 90.4 err5 73.5
+training: epoch 18: processing batch 350 of 450 ... 0.11 s (876.1 images/s) err 90.3 err5 73.3
+training: epoch 18: processing batch 400 of 450 ... 0.11 s (890.2 images/s) err 90.3 err5 73.4
+training: epoch 18: processing batch 450 of 450 ... 0.11 s (870.6 images/s) err 90.2 err5 73.4
+validation: epoch 18: processing batch  50 of  50 ... 0.03 s (3636.6 images/s) err 87.3 err5 66.2
+test: epoch 18: processing batch  50 of 100 ... 0.03 s (3621.6 images/s)
+test: epoch 18: processing batch 100 of 100 ... 0.03 s (3733.5 images/s)
+resuming by loading epoch 18
+training: epoch 19: processing batch  50 of 450 ... 0.11 s (877.5 images/s) err 90.4 err5 73.8
+training: epoch 19: processing batch 100 of 450 ... 0.12 s (859.0 images/s) err 90.1 err5 73.7
+training: epoch 19: processing batch 150 of 450 ... 0.11 s (889.3 images/s) err 90.1 err5 73.6
+training: epoch 19: processing batch 200 of 450 ... 0.11 s (870.6 images/s) err 90.2 err5 73.5
+training: epoch 19: processing batch 250 of 450 ... 0.11 s (891.6 images/s) err 90.2 err5 73.4
+training: epoch 19: processing batch 300 of 450 ... 0.11 s (873.8 images/s) err 90.1 err5 73.3
+training: epoch 19: processing batch 350 of 450 ... 0.11 s (877.3 images/s) err 90.0 err5 73.3
+training: epoch 19: processing batch 400 of 450 ... 0.12 s (860.0 images/s) err 90.0 err5 73.2
+training: epoch 19: processing batch 450 of 450 ... 0.11 s (892.2 images/s) err 90.1 err5 73.2
+validation: epoch 19: processing batch  50 of  50 ... 0.03 s (3872.7 images/s) err 87.0 err5 65.9
+test: epoch 19: processing batch  50 of 100 ... 0.03 s (3664.4 images/s)
+test: epoch 19: processing batch 100 of 100 ... 0.03 s (3634.7 images/s)
+resuming by loading epoch 19
+training: epoch 20: processing batch  50 of 450 ... 0.11 s (879.7 images/s) err 89.5 err5 72.7
+training: epoch 20: processing batch 100 of 450 ... 0.11 s (873.2 images/s) err 89.5 err5 72.2
+training: epoch 20: processing batch 150 of 450 ... 0.11 s (876.4 images/s) err 89.7 err5 72.4
+training: epoch 20: processing batch 200 of 450 ... 0.12 s (865.9 images/s) err 90.0 err5 72.9
+training: epoch 20: processing batch 250 of 450 ... 0.11 s (882.2 images/s) err 90.0 err5 72.8
+training: epoch 20: processing batch 300 of 450 ... 0.11 s (878.1 images/s) err 89.8 err5 72.5
+training: epoch 20: processing batch 350 of 450 ... 0.11 s (887.7 images/s) err 89.8 err5 72.5
+training: epoch 20: processing batch 400 of 450 ... 0.11 s (891.3 images/s) err 89.7 err5 72.4
+training: epoch 20: processing batch 450 of 450 ... 0.11 s (874.8 images/s) err 89.8 err5 72.4
+validation: epoch 20: processing batch  50 of  50 ... 0.03 s (3908.2 images/s) err 86.7 err5 66.0
+test: epoch 20: processing batch  50 of 100 ... 0.03 s (3667.8 images/s)
+test: epoch 20: processing batch 100 of 100 ... 0.03 s (3694.7 images/s)
+resuming by loading epoch 20
+training: epoch 21: processing batch  50 of 450 ... 0.11 s (877.3 images/s) err 89.0 err5 71.4
+training: epoch 21: processing batch 100 of 450 ... 0.11 s (895.0 images/s) err 89.4 err5 72.1
+training: epoch 21: processing batch 150 of 450 ... 0.11 s (892.2 images/s) err 89.2 err5 71.9
+training: epoch 21: processing batch 200 of 450 ... 0.12 s (865.7 images/s) err 89.3 err5 72.1
+training: epoch 21: processing batch 250 of 450 ... 0.11 s (878.0 images/s) err 89.3 err5 72.2
+training: epoch 21: processing batch 300 of 450 ... 0.11 s (891.1 images/s) err 89.4 err5 72.0
+training: epoch 21: processing batch 350 of 450 ... 0.11 s (884.2 images/s) err 89.5 err5 72.1
+training: epoch 21: processing batch 400 of 450 ... 0.11 s (893.0 images/s) err 89.5 err5 72.1
+training: epoch 21: processing batch 450 of 450 ... 0.12 s (851.9 images/s) err 89.5 err5 72.0
+validation: epoch 21: processing batch  50 of  50 ... 0.03 s (3630.5 images/s) err 86.6 err5 64.8
+test: epoch 21: processing batch  50 of 100 ... 0.03 s (3621.7 images/s)
+test: epoch 21: processing batch 100 of 100 ... 0.03 s (3612.8 images/s)
+resuming by loading epoch 21
+training: epoch 22: processing batch  50 of 450 ... 0.11 s (877.2 images/s) err 89.4 err5 71.7
+training: epoch 22: processing batch 100 of 450 ... 0.11 s (870.0 images/s) err 89.7 err5 71.8
+training: epoch 22: processing batch 150 of 450 ... 0.11 s (876.0 images/s) err 89.4 err5 71.8
+training: epoch 22: processing batch 200 of 450 ... 0.11 s (879.4 images/s) err 89.5 err5 71.7
+training: epoch 22: processing batch 250 of 450 ... 0.11 s (872.3 images/s) err 89.5 err5 71.8
+training: epoch 22: processing batch 300 of 450 ... 0.12 s (861.4 images/s) err 89.4 err5 71.8
+training: epoch 22: processing batch 350 of 450 ... 0.12 s (862.1 images/s) err 89.5 err5 71.8
+training: epoch 22: processing batch 400 of 450 ... 0.11 s (871.9 images/s) err 89.5 err5 71.8
+training: epoch 22: processing batch 450 of 450 ... 0.11 s (884.8 images/s) err 89.5 err5 71.7
+validation: epoch 22: processing batch  50 of  50 ... 0.03 s (3701.2 images/s) err 86.8 err5 64.9
+test: epoch 22: processing batch  50 of 100 ... 0.03 s (3585.4 images/s)
+test: epoch 22: processing batch 100 of 100 ... 0.03 s (3598.0 images/s)
+resuming by loading epoch 22
+training: epoch 23: processing batch  50 of 450 ... 0.11 s (889.4 images/s) err 89.6 err5 71.6
+training: epoch 23: processing batch 100 of 450 ... 0.11 s (871.0 images/s) err 89.5 err5 71.6
+training: epoch 23: processing batch 150 of 450 ... 0.12 s (866.3 images/s) err 89.5 err5 71.7
+training: epoch 23: processing batch 200 of 450 ... 0.11 s (874.0 images/s) err 89.5 err5 71.8
+training: epoch 23: processing batch 250 of 450 ... 0.11 s (874.8 images/s) err 89.6 err5 71.8
+training: epoch 23: processing batch 300 of 450 ... 0.11 s (889.0 images/s) err 89.5 err5 71.6
+training: epoch 23: processing batch 350 of 450 ... 0.11 s (885.2 images/s) err 89.5 err5 71.4
+training: epoch 23: processing batch 400 of 450 ... 0.12 s (852.3 images/s) err 89.5 err5 71.5
+training: epoch 23: processing batch 450 of 450 ... 0.11 s (874.2 images/s) err 89.5 err5 71.6
+validation: epoch 23: processing batch  50 of  50 ... 0.03 s (3683.6 images/s) err 86.0 err5 64.6
+test: epoch 23: processing batch  50 of 100 ... 0.03 s (3816.7 images/s)
+test: epoch 23: processing batch 100 of 100 ... 0.03 s (3905.6 images/s)
+resuming by loading epoch 23
+training: epoch 24: processing batch  50 of 450 ... 0.11 s (872.6 images/s) err 88.9 err5 70.8
+training: epoch 24: processing batch 100 of 450 ... 0.12 s (856.6 images/s) err 89.2 err5 71.0
+training: epoch 24: processing batch 150 of 450 ... 0.12 s (868.6 images/s) err 89.2 err5 71.3
+training: epoch 24: processing batch 200 of 450 ... 0.12 s (862.9 images/s) err 89.2 err5 71.3
+training: epoch 24: processing batch 250 of 450 ... 0.11 s (877.1 images/s) err 89.1 err5 71.2
+training: epoch 24: processing batch 300 of 450 ... 0.11 s (869.7 images/s) err 89.1 err5 71.2
+training: epoch 24: processing batch 350 of 450 ... 0.11 s (877.1 images/s) err 89.1 err5 71.3
+training: epoch 24: processing batch 400 of 450 ... 0.11 s (875.5 images/s) err 89.2 err5 71.3
+training: epoch 24: processing batch 450 of 450 ... 0.11 s (878.4 images/s) err 89.2 err5 71.3
+validation: epoch 24: processing batch  50 of  50 ... 0.03 s (3688.8 images/s) err 85.9 err5 63.9
+test: epoch 24: processing batch  50 of 100 ... 0.03 s (3715.5 images/s)
+test: epoch 24: processing batch 100 of 100 ... 0.03 s (3716.1 images/s)
+resuming by loading epoch 24
+training: epoch 25: processing batch  50 of 450 ... 0.11 s (889.0 images/s) err 88.9 err5 70.6
+training: epoch 25: processing batch 100 of 450 ... 0.11 s (874.4 images/s) err 88.8 err5 70.5
+training: epoch 25: processing batch 150 of 450 ... 0.11 s (889.2 images/s) err 88.5 err5 70.4
+training: epoch 25: processing batch 200 of 450 ... 0.12 s (862.9 images/s) err 88.6 err5 70.4
+training: epoch 25: processing batch 250 of 450 ... 0.11 s (882.6 images/s) err 88.7 err5 70.5
+training: epoch 25: processing batch 300 of 450 ... 0.11 s (875.8 images/s) err 88.7 err5 70.6
+training: epoch 25: processing batch 350 of 450 ... 0.11 s (877.4 images/s) err 88.7 err5 70.6
+training: epoch 25: processing batch 400 of 450 ... 0.11 s (885.3 images/s) err 88.7 err5 70.5
+training: epoch 25: processing batch 450 of 450 ... 0.11 s (873.9 images/s) err 88.7 err5 70.3
+validation: epoch 25: processing batch  50 of  50 ... 0.03 s (3784.1 images/s) err 85.4 err5 63.6
+test: epoch 25: processing batch  50 of 100 ... 0.03 s (3676.5 images/s)
+test: epoch 25: processing batch 100 of 100 ... 0.03 s (3677.5 images/s)
+resuming by loading epoch 25
+training: epoch 26: processing batch  50 of 450 ... 0.11 s (875.1 images/s) err 88.4 err5 70.6
+training: epoch 26: processing batch 100 of 450 ... 0.11 s (869.6 images/s) err 88.3 err5 69.8
+training: epoch 26: processing batch 150 of 450 ... 0.11 s (874.1 images/s) err 88.5 err5 70.0
+training: epoch 26: processing batch 200 of 450 ... 0.12 s (866.0 images/s) err 88.5 err5 70.3
+training: epoch 26: processing batch 250 of 450 ... 0.11 s (876.5 images/s) err 88.6 err5 70.4
+training: epoch 26: processing batch 300 of 450 ... 0.11 s (880.7 images/s) err 88.5 err5 70.3
+training: epoch 26: processing batch 350 of 450 ... 0.12 s (844.2 images/s) err 88.5 err5 70.2
+training: epoch 26: processing batch 400 of 450 ... 0.11 s (886.4 images/s) err 88.5 err5 70.2
+training: epoch 26: processing batch 450 of 450 ... 0.12 s (838.2 images/s) err 88.6 err5 70.2
+validation: epoch 26: processing batch  50 of  50 ... 0.03 s (3901.2 images/s) err 85.0 err5 61.8
+test: epoch 26: processing batch  50 of 100 ... 0.02 s (4030.7 images/s)
+test: epoch 26: processing batch 100 of 100 ... 0.02 s (4068.4 images/s)
+resuming by loading epoch 26
+training: epoch 27: processing batch  50 of 450 ... 0.12 s (840.4 images/s) err 88.4 err5 69.7
+training: epoch 27: processing batch 100 of 450 ... 0.11 s (875.2 images/s) err 88.4 err5 69.5
+training: epoch 27: processing batch 150 of 450 ... 0.12 s (868.1 images/s) err 88.4 err5 69.4
+training: epoch 27: processing batch 200 of 450 ... 0.11 s (876.3 images/s) err 88.4 err5 69.6
+training: epoch 27: processing batch 250 of 450 ... 0.11 s (873.9 images/s) err 88.4 err5 69.6
+training: epoch 27: processing batch 300 of 450 ... 0.11 s (876.7 images/s) err 88.6 err5 69.9
+training: epoch 27: processing batch 350 of 450 ... 0.11 s (886.5 images/s) err 88.5 err5 69.9
+training: epoch 27: processing batch 400 of 450 ... 0.11 s (892.2 images/s) err 88.5 err5 70.1
+training: epoch 27: processing batch 450 of 450 ... 0.11 s (905.0 images/s) err 88.5 err5 70.0
+validation: epoch 27: processing batch  50 of  50 ... 0.02 s (4022.8 images/s) err 85.5 err5 63.0
+test: epoch 27: processing batch  50 of 100 ... 0.03 s (3842.1 images/s)
+test: epoch 27: processing batch 100 of 100 ... 0.03 s (3666.4 images/s)
+resuming by loading epoch 27
+training: epoch 28: processing batch  50 of 450 ... 0.12 s (866.9 images/s) err 88.3 err5 69.7
+training: epoch 28: processing batch 100 of 450 ... 0.11 s (884.0 images/s) err 88.2 err5 69.2
+training: epoch 28: processing batch 150 of 450 ... 0.11 s (888.7 images/s) err 88.1 err5 68.9
+training: epoch 28: processing batch 200 of 450 ... 0.12 s (867.4 images/s) err 88.2 err5 69.1
+training: epoch 28: processing batch 250 of 450 ... 0.12 s (859.8 images/s) err 88.4 err5 69.1
+training: epoch 28: processing batch 300 of 450 ... 0.11 s (895.9 images/s) err 88.3 err5 69.4
+training: epoch 28: processing batch 350 of 450 ... 0.11 s (872.9 images/s) err 88.3 err5 69.4
+training: epoch 28: processing batch 400 of 450 ... 0.12 s (867.5 images/s) err 88.3 err5 69.4
+training: epoch 28: processing batch 450 of 450 ... 0.14 s (727.7 images/s) err 88.3 err5 69.4
+validation: epoch 28: processing batch  50 of  50 ... 0.03 s (3872.4 images/s) err 84.6 err5 61.5
+test: epoch 28: processing batch  50 of 100 ... 0.03 s (3896.5 images/s)
+test: epoch 28: processing batch 100 of 100 ... 0.02 s (4000.5 images/s)
+resuming by loading epoch 28
+training: epoch 29: processing batch  50 of 450 ... 0.11 s (869.9 images/s) err 88.0 err5 67.8
+training: epoch 29: processing batch 100 of 450 ... 0.12 s (836.6 images/s) err 88.0 err5 67.8
+training: epoch 29: processing batch 150 of 450 ... 0.14 s (737.8 images/s) err 88.2 err5 68.1
+training: epoch 29: processing batch 200 of 450 ... 0.11 s (873.0 images/s) err 88.2 err5 68.3
+training: epoch 29: processing batch 250 of 450 ... 0.11 s (878.7 images/s) err 88.3 err5 68.6
+training: epoch 29: processing batch 300 of 450 ... 0.11 s (881.8 images/s) err 88.3 err5 68.8
+training: epoch 29: processing batch 350 of 450 ... 0.12 s (858.7 images/s) err 88.4 err5 69.0
+training: epoch 29: processing batch 400 of 450 ... 0.12 s (865.8 images/s) err 88.3 err5 69.1
+training: epoch 29: processing batch 450 of 450 ... 0.11 s (882.3 images/s) err 88.3 err5 69.1
+validation: epoch 29: processing batch  50 of  50 ... 0.02 s (4087.6 images/s) err 84.5 err5 61.1
+test: epoch 29: processing batch  50 of 100 ... 0.03 s (3937.0 images/s)
+test: epoch 29: processing batch 100 of 100 ... 0.02 s (4021.4 images/s)
+resuming by loading epoch 29
+training: epoch 30: processing batch  50 of 450 ... 0.11 s (881.5 images/s) err 88.3 err5 69.2
+training: epoch 30: processing batch 100 of 450 ... 0.13 s (740.8 images/s) err 88.4 err5 69.0
+training: epoch 30: processing batch 150 of 450 ... 0.11 s (876.2 images/s) err 88.5 err5 69.2
+training: epoch 30: processing batch 200 of 450 ... 0.11 s (899.1 images/s) err 87.8 err5 68.7
+training: epoch 30: processing batch 250 of 450 ... 0.11 s (892.1 images/s) err 87.8 err5 68.8
+training: epoch 30: processing batch 300 of 450 ... 0.11 s (896.0 images/s) err 87.8 err5 68.7
+training: epoch 30: processing batch 350 of 450 ... 0.11 s (881.2 images/s) err 87.9 err5 68.8
+training: epoch 30: processing batch 400 of 450 ... 0.12 s (865.7 images/s) err 87.8 err5 68.7
+training: epoch 30: processing batch 450 of 450 ... 0.11 s (891.0 images/s) err 87.8 err5 68.6
+validation: epoch 30: processing batch  50 of  50 ... 0.03 s (3986.0 images/s) err 84.5 err5 60.6
+test: epoch 30: processing batch  50 of 100 ... 0.03 s (3983.0 images/s)
+test: epoch 30: processing batch 100 of 100 ... 0.03 s (3989.9 images/s)
+resuming by loading epoch 30
+training: epoch 31: processing batch  50 of 450 ... 0.11 s (887.8 images/s) err 87.7 err5 68.1
+training: epoch 31: processing batch 100 of 450 ... 0.11 s (907.2 images/s) err 87.9 err5 68.3
+training: epoch 31: processing batch 150 of 450 ... 0.11 s (893.1 images/s) err 87.9 err5 68.3
+training: epoch 31: processing batch 200 of 450 ... 0.11 s (888.5 images/s) err 87.7 err5 68.3
+training: epoch 31: processing batch 250 of 450 ... 0.11 s (885.7 images/s) err 87.6 err5 68.3
+training: epoch 31: processing batch 300 of 450 ... 0.11 s (889.4 images/s) err 87.7 err5 68.3
+training: epoch 31: processing batch 350 of 450 ... 0.11 s (888.9 images/s) err 87.7 err5 68.4
+training: epoch 31: processing batch 400 of 450 ... 0.11 s (893.3 images/s) err 87.7 err5 68.4
+training: epoch 31: processing batch 450 of 450 ... 0.11 s (888.1 images/s) err 87.7 err5 68.3
+validation: epoch 31: processing batch  50 of  50 ... 0.03 s (3923.7 images/s) err 84.0 err5 59.6
+test: epoch 31: processing batch  50 of 100 ... 0.03 s (3933.2 images/s)
+test: epoch 31: processing batch 100 of 100 ... 0.03 s (3944.0 images/s)
+resuming by loading epoch 31
+training: epoch 32: processing batch  50 of 450 ... 0.11 s (882.8 images/s) err 87.6 err5 66.7
+training: epoch 32: processing batch 100 of 450 ... 0.11 s (887.0 images/s) err 87.7 err5 67.8
+training: epoch 32: processing batch 150 of 450 ... 0.11 s (874.6 images/s) err 87.7 err5 67.9
+training: epoch 32: processing batch 200 of 450 ... 0.11 s (885.4 images/s) err 87.7 err5 68.0
+training: epoch 32: processing batch 250 of 450 ... 0.11 s (886.9 images/s) err 87.5 err5 68.0
+training: epoch 32: processing batch 300 of 450 ... 0.11 s (890.0 images/s) err 87.6 err5 68.0
+training: epoch 32: processing batch 350 of 450 ... 0.11 s (886.7 images/s) err 87.6 err5 68.0
+training: epoch 32: processing batch 400 of 450 ... 0.11 s (881.9 images/s) err 87.6 err5 68.1
+training: epoch 32: processing batch 450 of 450 ... 0.11 s (904.2 images/s) err 87.6 err5 68.1
+validation: epoch 32: processing batch  50 of  50 ... 0.03 s (3995.2 images/s) err 84.7 err5 62.0
+test: epoch 32: processing batch  50 of 100 ... 0.03 s (3845.8 images/s)
+test: epoch 32: processing batch 100 of 100 ... 0.03 s (3973.6 images/s)
+resuming by loading epoch 32
+training: epoch 33: processing batch  50 of 450 ... 0.11 s (891.8 images/s) err 87.8 err5 68.6
+training: epoch 33: processing batch 100 of 450 ... 0.11 s (884.4 images/s) err 87.8 err5 68.2
+training: epoch 33: processing batch 150 of 450 ... 0.12 s (859.4 images/s) err 87.8 err5 67.8
+training: epoch 33: processing batch 200 of 450 ... 0.11 s (885.1 images/s) err 87.6 err5 67.8
+training: epoch 33: processing batch 250 of 450 ... 0.11 s (893.5 images/s) err 87.5 err5 67.7
+training: epoch 33: processing batch 300 of 450 ... 0.11 s (892.4 images/s) err 87.5 err5 67.8
+training: epoch 33: processing batch 350 of 450 ... 0.11 s (917.6 images/s) err 87.4 err5 67.7
+training: epoch 33: processing batch 400 of 450 ... 0.11 s (913.4 images/s) err 87.4 err5 67.7
+training: epoch 33: processing batch 450 of 450 ... 0.11 s (887.9 images/s) err 87.4 err5 67.7
+validation: epoch 33: processing batch  50 of  50 ... 0.03 s (3902.3 images/s) err 82.9 err5 58.7
+test: epoch 33: processing batch  50 of 100 ... 0.03 s (3968.5 images/s)
+test: epoch 33: processing batch 100 of 100 ... 0.03 s (3685.6 images/s)
+resuming by loading epoch 33
+training: epoch 34: processing batch  50 of 450 ... 0.11 s (888.3 images/s) err 87.8 err5 68.2
+training: epoch 34: processing batch 100 of 450 ... 0.11 s (873.0 images/s) err 87.5 err5 67.8
+training: epoch 34: processing batch 150 of 450 ... 0.11 s (890.9 images/s) err 87.1 err5 67.1
+training: epoch 34: processing batch 200 of 450 ... 0.12 s (867.7 images/s) err 87.2 err5 67.1
+training: epoch 34: processing batch 250 of 450 ... 0.11 s (881.4 images/s) err 87.1 err5 67.0
+training: epoch 34: processing batch 300 of 450 ... 0.11 s (871.1 images/s) err 87.2 err5 67.1
+training: epoch 34: processing batch 350 of 450 ... 0.11 s (888.0 images/s) err 87.3 err5 67.2
+training: epoch 34: processing batch 400 of 450 ... 0.11 s (876.6 images/s) err 87.3 err5 67.1
+training: epoch 34: processing batch 450 of 450 ... 0.11 s (872.7 images/s) err 87.3 err5 67.1
+validation: epoch 34: processing batch  50 of  50 ... 0.03 s (3644.0 images/s) err 83.5 err5 59.6
+test: epoch 34: processing batch  50 of 100 ... 0.03 s (3686.4 images/s)
+test: epoch 34: processing batch 100 of 100 ... 0.03 s (3799.7 images/s)
+resuming by loading epoch 34
+training: epoch 35: processing batch  50 of 450 ... 0.12 s (866.8 images/s) err 87.4 err5 68.0
+training: epoch 35: processing batch 100 of 450 ... 0.11 s (887.0 images/s) err 87.4 err5 67.8
+training: epoch 35: processing batch 150 of 450 ... 0.12 s (868.4 images/s) err 87.2 err5 67.5
+training: epoch 35: processing batch 200 of 450 ... 0.11 s (885.0 images/s) err 87.2 err5 67.5
+training: epoch 35: processing batch 250 of 450 ... 0.12 s (863.5 images/s) err 87.1 err5 67.4
+training: epoch 35: processing batch 300 of 450 ... 0.11 s (872.8 images/s) err 86.9 err5 67.1
+training: epoch 35: processing batch 350 of 450 ... 0.12 s (859.7 images/s) err 86.9 err5 67.1
+training: epoch 35: processing batch 400 of 450 ... 0.11 s (893.8 images/s) err 86.8 err5 67.0
+training: epoch 35: processing batch 450 of 450 ... 0.12 s (867.3 images/s) err 86.8 err5 66.8
+validation: epoch 35: processing batch  50 of  50 ... 0.03 s (3638.8 images/s) err 82.4 err5 58.8
+test: epoch 35: processing batch  50 of 100 ... 0.03 s (3693.7 images/s)
+test: epoch 35: processing batch 100 of 100 ... 0.03 s (3609.8 images/s)
+resuming by loading epoch 35
+training: epoch 36: processing batch  50 of 450 ... 0.11 s (883.0 images/s) err 86.8 err5 65.8
+training: epoch 36: processing batch 100 of 450 ... 0.11 s (881.2 images/s) err 87.1 err5 66.5
+training: epoch 36: processing batch 150 of 450 ... 0.12 s (869.4 images/s) err 87.0 err5 66.4
+training: epoch 36: processing batch 200 of 450 ... 0.11 s (894.2 images/s) err 87.0 err5 66.4
+training: epoch 36: processing batch 250 of 450 ... 0.12 s (859.2 images/s) err 87.0 err5 66.4
+training: epoch 36: processing batch 300 of 450 ... 0.12 s (866.8 images/s) err 87.0 err5 66.6
+training: epoch 36: processing batch 350 of 450 ... 0.11 s (875.5 images/s) err 87.0 err5 66.6
+training: epoch 36: processing batch 400 of 450 ... 0.11 s (869.8 images/s) err 87.0 err5 66.7
+training: epoch 36: processing batch 450 of 450 ... 0.11 s (889.0 images/s) err 86.9 err5 66.7
+validation: epoch 36: processing batch  50 of  50 ... 0.03 s (3750.2 images/s) err 83.1 err5 57.7
+test: epoch 36: processing batch  50 of 100 ... 0.03 s (3637.3 images/s)
+test: epoch 36: processing batch 100 of 100 ... 0.03 s (3488.3 images/s)
+resuming by loading epoch 36
+training: epoch 37: processing batch  50 of 450 ... 0.12 s (844.1 images/s) err 86.4 err5 65.7
+training: epoch 37: processing batch 100 of 450 ... 0.12 s (853.8 images/s) err 86.7 err5 66.3
+training: epoch 37: processing batch 150 of 450 ... 0.12 s (834.3 images/s) err 86.9 err5 66.7
+training: epoch 37: processing batch 200 of 450 ... 0.12 s (852.4 images/s) err 87.0 err5 66.7
+training: epoch 37: processing batch 250 of 450 ... 0.12 s (868.6 images/s) err 87.0 err5 66.8
+training: epoch 37: processing batch 300 of 450 ... 0.12 s (823.8 images/s) err 86.9 err5 66.7
+training: epoch 37: processing batch 350 of 450 ... 0.12 s (817.7 images/s) err 86.9 err5 66.7
+training: epoch 37: processing batch 400 of 450 ... 0.11 s (877.0 images/s) err 86.9 err5 66.7
+training: epoch 37: processing batch 450 of 450 ... 0.12 s (850.3 images/s) err 87.0 err5 66.7
+validation: epoch 37: processing batch  50 of  50 ... 0.03 s (3840.1 images/s) err 82.5 err5 57.8
+test: epoch 37: processing batch  50 of 100 ... 0.03 s (3561.9 images/s)
+test: epoch 37: processing batch 100 of 100 ... 0.03 s (3423.6 images/s)
+resuming by loading epoch 37
+training: epoch 38: processing batch  50 of 450 ... 0.12 s (866.0 images/s) err 87.3 err5 66.9
+training: epoch 38: processing batch 100 of 450 ... 0.12 s (839.8 images/s) err 87.3 err5 67.1
+training: epoch 38: processing batch 150 of 450 ... 0.12 s (858.7 images/s) err 86.9 err5 66.9
+training: epoch 38: processing batch 200 of 450 ... 0.12 s (847.7 images/s) err 87.0 err5 66.8
+training: epoch 38: processing batch 250 of 450 ... 0.12 s (818.9 images/s) err 86.9 err5 66.7
+training: epoch 38: processing batch 300 of 450 ... 0.12 s (844.4 images/s) err 86.8 err5 66.7
+training: epoch 38: processing batch 350 of 450 ... 0.12 s (847.5 images/s) err 86.8 err5 66.5
+training: epoch 38: processing batch 400 of 450 ... 0.12 s (844.3 images/s) err 86.8 err5 66.5
+training: epoch 38: processing batch 450 of 450 ... 0.12 s (851.0 images/s) err 86.8 err5 66.5
+validation: epoch 38: processing batch  50 of  50 ... 0.03 s (3931.7 images/s) err 82.9 err5 58.5
+test: epoch 38: processing batch  50 of 100 ... 0.03 s (3524.7 images/s)
+test: epoch 38: processing batch 100 of 100 ... 0.03 s (3561.8 images/s)
+resuming by loading epoch 38
+training: epoch 39: processing batch  50 of 450 ... 0.12 s (858.9 images/s) err 86.2 err5 65.0
+training: epoch 39: processing batch 100 of 450 ... 0.12 s (865.5 images/s) err 86.4 err5 65.1
+training: epoch 39: processing batch 150 of 450 ... 0.12 s (854.7 images/s) err 86.1 err5 65.0
+training: epoch 39: processing batch 200 of 450 ... 0.12 s (849.7 images/s) err 86.0 err5 65.4
+training: epoch 39: processing batch 250 of 450 ... 0.11 s (870.5 images/s) err 86.1 err5 65.2
+training: epoch 39: processing batch 300 of 450 ... 0.12 s (844.7 images/s) err 86.2 err5 65.5
+training: epoch 39: processing batch 350 of 450 ... 0.12 s (826.1 images/s) err 86.1 err5 65.4
+training: epoch 39: processing batch 400 of 450 ... 0.12 s (826.8 images/s) err 86.1 err5 65.3
+training: epoch 39: processing batch 450 of 450 ... 0.12 s (852.3 images/s) err 86.1 err5 65.4
+validation: epoch 39: processing batch  50 of  50 ... 0.03 s (3543.5 images/s) err 82.0 err5 55.9
+test: epoch 39: processing batch  50 of 100 ... 0.03 s (3581.4 images/s)
+test: epoch 39: processing batch 100 of 100 ... 0.03 s (3516.2 images/s)
+resuming by loading epoch 39
+training: epoch 40: processing batch  50 of 450 ... 0.12 s (865.0 images/s) err 86.3 err5 66.3
+training: epoch 40: processing batch 100 of 450 ... 0.11 s (893.9 images/s) err 86.3 err5 65.6
+training: epoch 40: processing batch 150 of 450 ... 0.11 s (872.5 images/s) err 86.2 err5 65.6
+training: epoch 40: processing batch 200 of 450 ... 0.12 s (868.8 images/s) err 86.1 err5 65.4
+training: epoch 40: processing batch 250 of 450 ... 0.11 s (874.7 images/s) err 86.1 err5 65.5
+training: epoch 40: processing batch 300 of 450 ... 0.12 s (862.8 images/s) err 86.2 err5 65.7
+training: epoch 40: processing batch 350 of 450 ... 0.11 s (870.9 images/s) err 86.3 err5 65.7
+training: epoch 40: processing batch 400 of 450 ... 0.11 s (883.1 images/s) err 86.4 err5 65.7
+training: epoch 40: processing batch 450 of 450 ... 0.11 s (877.4 images/s) err 86.2 err5 65.6
+validation: epoch 40: processing batch  50 of  50 ... 0.03 s (3685.8 images/s) err 82.1 err5 57.0
+test: epoch 40: processing batch  50 of 100 ... 0.03 s (3704.8 images/s)
+test: epoch 40: processing batch 100 of 100 ... 0.03 s (3699.3 images/s)
+Elapsed time is 2229.920563 seconds.
+>> 

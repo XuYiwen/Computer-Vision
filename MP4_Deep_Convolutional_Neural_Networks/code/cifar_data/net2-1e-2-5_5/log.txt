@@ -1,0 +1,882 @@
+     layer|      1|      2|      3|      4|      5|      6|      7|      8|      9|     10|     11|
+      type|    cnv|   relu|  mpool|    cnv|   relu|  mpool|    cnv|   relu|  apool|    cnv|  sftml|
+   support|    5x5|    1x1|    2x2|    5x5|    1x1|    2x2|    5x5|    1x1|    2x2|    4x4|    1x1|
+    stride|      1|      1|      2|      1|      1|      2|      1|      1|      2|      1|      1|
+       pad|      2|      0|      0|      2|      0|      0|      2|      0|      0|      0|      0|
+   out dim|     30|     30|     30|     30|     30|     30|     30|     30|     30|    100|    100|
+  filt dim|      3|    n/a|    n/a|     30|    n/a|    n/a|     30|    n/a|    n/a|     30|    n/a|
+rec. field|      5|      5|      6|     14|     14|     16|     32|     32|     36|     60|     60|
+c/g net KB|    9/0|    0/0|    0/0|   88/0|    0/0|    0/0|   88/0|    0/0|    0/0|  188/0|    0/0|
+total network CPU/GPU memory: 0.4/0 MB
+learning rate changed (0.000000 --> 0.001000): resetting momentum
+training: epoch 01: processing batch  50 of 450 ...
+layer 1 ratio | r1: -0.000146 |r2: 0.000961
+layer 4 ratio | r1: -0.000194 |r2: 0.002089
+layer 7 ratio | r1: 0.000122 |r2: 0.000260
+layer 10 ratio | r1: -0.000000 |r2: -0.000937
+ 0.18 s (561.1 images/s) err 99.1 err5 94.9
+training: epoch 01: processing batch 100 of 450 ...
+layer 1 ratio | r1: 0.000471 |r2: 0.000768
+layer 4 ratio | r1: 0.005177 |r2: 0.000859
+layer 7 ratio | r1: 0.000371 |r2: -0.000675
+layer 10 ratio | r1: -0.000000 |r2: 0.001094
+ 0.18 s (563.1 images/s) err 99.0 err5 94.2
+training: epoch 01: processing batch 150 of 450 ...
+layer 1 ratio | r1: 0.000056 |r2: 0.000260
+layer 4 ratio | r1: -0.000059 |r2: -0.000191
+layer 7 ratio | r1: -0.000517 |r2: 0.002572
+layer 10 ratio | r1: -0.000000 |r2: -0.000069
+ 0.18 s (564.0 images/s) err 98.7 err5 93.5
+training: epoch 01: processing batch 200 of 450 ...
+layer 1 ratio | r1: -0.000085 |r2: 0.000326
+layer 4 ratio | r1: 0.000270 |r2: 0.000351
+layer 7 ratio | r1: 0.000275 |r2: -0.014283
+layer 10 ratio | r1: -0.000000 |r2: 0.000345
+ 0.18 s (556.1 images/s) err 98.4 err5 92.6
+training: epoch 01: processing batch 250 of 450 ...
+layer 1 ratio | r1: -0.000258 |r2: 0.000192
+layer 4 ratio | r1: -0.000237 |r2: 0.000093
+layer 7 ratio | r1: -0.000341 |r2: 0.000552
+layer 10 ratio | r1: -0.000000 |r2: 0.000208
+ 0.18 s (565.0 images/s) err 98.0 err5 91.1
+training: epoch 01: processing batch 300 of 450 ...
+layer 1 ratio | r1: 0.000095 |r2: 0.000205
+layer 4 ratio | r1: 0.000003 |r2: 0.000157
+layer 7 ratio | r1: 0.003187 |r2: 0.000367
+layer 10 ratio | r1: -0.000000 |r2: 0.000020
+ 0.18 s (556.0 images/s) err 97.6 err5 89.7
+training: epoch 01: processing batch 350 of 450 ...
+layer 1 ratio | r1: -0.009565 |r2: 0.000151
+layer 4 ratio | r1: -0.000182 |r2: 0.000112
+layer 7 ratio | r1: -0.002535 |r2: 0.000189
+layer 10 ratio | r1: -0.000000 |r2: 0.000132
+ 0.20 s (511.5 images/s) err 97.2 err5 88.5
+training: epoch 01: processing batch 400 of 450 ...
+layer 1 ratio | r1: 0.001438 |r2: 0.000139
+layer 4 ratio | r1: 0.000126 |r2: 0.000122
+layer 7 ratio | r1: -0.002264 |r2: 0.000185
+layer 10 ratio | r1: -0.000000 |r2: 0.000075
+ 0.18 s (565.4 images/s) err 96.8 err5 87.3
+training: epoch 01: processing batch 450 of 450 ...
+layer 1 ratio | r1: -0.002424 |r2: 0.000085
+layer 4 ratio | r1: -0.000181 |r2: 0.000077
+layer 7 ratio | r1: -0.006018 |r2: 0.000111
+layer 10 ratio | r1: -0.000000 |r2: 0.000107
+ 0.18 s (570.0 images/s) err 96.3 err5 86.3
+validation: epoch 01: processing batch  50 of  50 ... 0.06 s (1620.7 images/s) err 90.0 err5 71.9
+test: epoch 01: processing batch  50 of 100 ... 0.06 s (1626.0 images/s)
+test: epoch 01: processing batch 100 of 100 ... 0.06 s (1598.7 images/s)
+resuming by loading epoch 1
+training: epoch 02: processing batch  50 of 450 ...
+layer 1 ratio | r1: 0.004304 |r2: 0.000077
+layer 4 ratio | r1: -0.000056 |r2: 0.000079
+layer 7 ratio | r1: -0.000253 |r2: 0.000115
+layer 10 ratio | r1: -0.000000 |r2: 0.000050
+ 0.18 s (557.3 images/s) err 92.1 err5 75.5
+training: epoch 02: processing batch 100 of 450 ...
+layer 1 ratio | r1: -0.002486 |r2: 0.000068
+layer 4 ratio | r1: -0.000004 |r2: 0.000078
+layer 7 ratio | r1: 0.001586 |r2: 0.000079
+layer 10 ratio | r1: -0.000000 |r2: 0.000089
+ 0.18 s (567.8 images/s) err 92.3 err5 75.0
+training: epoch 02: processing batch 150 of 450 ...
+layer 1 ratio | r1: -0.007298 |r2: 0.000066
+layer 4 ratio | r1: 0.000082 |r2: 0.000084
+layer 7 ratio | r1: -0.000176 |r2: 0.000079
+layer 10 ratio | r1: -0.000000 |r2: 0.000156
+ 0.17 s (574.1 images/s) err 91.9 err5 74.4
+training: epoch 02: processing batch 200 of 450 ...
+layer 1 ratio | r1: -0.001041 |r2: 0.000050
+layer 4 ratio | r1: -0.000181 |r2: 0.000038
+layer 7 ratio | r1: 0.000507 |r2: 0.000063
+layer 10 ratio | r1: -0.000000 |r2: 0.000010
+ 0.18 s (566.3 images/s) err 91.6 err5 73.7
+training: epoch 02: processing batch 250 of 450 ...
+layer 1 ratio | r1: 0.003718 |r2: 0.000046
+layer 4 ratio | r1: -0.000083 |r2: 0.000060
+layer 7 ratio | r1: 0.000320 |r2: 0.000059
+layer 10 ratio | r1: -0.000000 |r2: 0.000042
+ 0.18 s (559.5 images/s) err 91.3 err5 73.0
+training: epoch 02: processing batch 300 of 450 ...
+layer 1 ratio | r1: 0.005633 |r2: 0.000027
+layer 4 ratio | r1: -0.000144 |r2: 0.000037
+layer 7 ratio | r1: 0.000455 |r2: 0.000039
+layer 10 ratio | r1: -0.000000 |r2: 0.000226
+ 0.18 s (560.7 images/s) err 91.0 err5 72.6
+training: epoch 02: processing batch 350 of 450 ...
+layer 1 ratio | r1: 0.016621 |r2: 0.000037
+layer 4 ratio | r1: -0.000300 |r2: 0.000031
+layer 7 ratio | r1: 0.000393 |r2: 0.000047
+layer 10 ratio | r1: -0.000000 |r2: -0.000013
+ 0.18 s (560.8 images/s) err 90.5 err5 72.0
+training: epoch 02: processing batch 400 of 450 ...
+layer 1 ratio | r1: -0.006248 |r2: 0.000032
+layer 4 ratio | r1: 0.000340 |r2: 0.000048
+layer 7 ratio | r1: -0.000778 |r2: 0.000049
+layer 10 ratio | r1: -0.000000 |r2: 0.000027
+ 0.18 s (564.6 images/s) err 90.3 err5 71.5
+training: epoch 02: processing batch 450 of 450 ...
+layer 1 ratio | r1: 0.011383 |r2: 0.000043
+layer 4 ratio | r1: -0.000048 |r2: 0.000036
+layer 7 ratio | r1: -0.000076 |r2: 0.000042
+layer 10 ratio | r1: -0.000000 |r2: 0.000097
+ 0.19 s (526.1 images/s) err 90.0 err5 71.0
+validation: epoch 02: processing batch  50 of  50 ... 0.06 s (1600.7 images/s) err 83.8 err5 60.6
+test: epoch 02: processing batch  50 of 100 ... 0.06 s (1603.9 images/s)
+test: epoch 02: processing batch 100 of 100 ... 0.06 s (1610.7 images/s)
+resuming by loading epoch 2
+training: epoch 03: processing batch  50 of 450 ...
+layer 1 ratio | r1: 0.001384 |r2: 0.000026
+layer 4 ratio | r1: 0.000140 |r2: 0.000022
+layer 7 ratio | r1: -0.000390 |r2: 0.000036
+layer 10 ratio | r1: -0.000000 |r2: 0.000029
+ 0.18 s (566.2 images/s) err 87.4 err5 65.3
+training: epoch 03: processing batch 100 of 450 ...
+layer 1 ratio | r1: 0.003344 |r2: 0.000028
+layer 4 ratio | r1: 0.000146 |r2: 0.000032
+layer 7 ratio | r1: -0.000367 |r2: 0.000038
+layer 10 ratio | r1: -0.000000 |r2: 0.000018
+ 0.18 s (567.7 images/s) err 87.1 err5 65.1
+training: epoch 03: processing batch 150 of 450 ...
+layer 1 ratio | r1: -0.000813 |r2: 0.000032
+layer 4 ratio | r1: -0.000286 |r2: 0.000023
+layer 7 ratio | r1: -0.000035 |r2: 0.000038
+layer 10 ratio | r1: -0.000000 |r2: 0.000022
+ 0.18 s (561.3 images/s) err 86.9 err5 65.2
+training: epoch 03: processing batch 200 of 450 ...
+layer 1 ratio | r1: -0.001268 |r2: 0.000019
+layer 4 ratio | r1: -0.002788 |r2: 0.000023
+layer 7 ratio | r1: 0.000317 |r2: 0.000028
+layer 10 ratio | r1: -0.000000 |r2: -0.000030
+ 0.18 s (565.6 images/s) err 86.7 err5 65.0
+training: epoch 03: processing batch 250 of 450 ...
+layer 1 ratio | r1: -0.000156 |r2: 0.000019
+layer 4 ratio | r1: -0.000779 |r2: 0.000027
+layer 7 ratio | r1: 0.000414 |r2: 0.000026
+layer 10 ratio | r1: -0.000000 |r2: 0.000098
+ 0.18 s (566.6 images/s) err 86.6 err5 64.8
+training: epoch 03: processing batch 300 of 450 ...
+layer 1 ratio | r1: -0.003503 |r2: 0.000021
+layer 4 ratio | r1: 0.005417 |r2: 0.000027
+layer 7 ratio | r1: 0.000152 |r2: 0.000021
+layer 10 ratio | r1: -0.000000 |r2: 0.000009
+ 0.17 s (572.9 images/s) err 86.4 err5 64.3
+training: epoch 03: processing batch 350 of 450 ...
+layer 1 ratio | r1: 0.001545 |r2: 0.000017
+layer 4 ratio | r1: 0.003595 |r2: 0.000026
+layer 7 ratio | r1: 0.000066 |r2: 0.000026
+layer 10 ratio | r1: -0.000000 |r2: -0.000001
+ 0.18 s (565.2 images/s) err 86.1 err5 64.0
+training: epoch 03: processing batch 400 of 450 ...
+layer 1 ratio | r1: 0.003561 |r2: 0.000022
+layer 4 ratio | r1: -0.000795 |r2: 0.000026
+layer 7 ratio | r1: -0.000036 |r2: 0.000023
+layer 10 ratio | r1: -0.000000 |r2: 0.000098
+ 0.17 s (572.3 images/s) err 85.8 err5 63.6
+training: epoch 03: processing batch 450 of 450 ...
+layer 1 ratio | r1: -0.007657 |r2: 0.000014
+layer 4 ratio | r1: 0.000214 |r2: 0.000021
+layer 7 ratio | r1: 0.000123 |r2: 0.000021
+layer 10 ratio | r1: -0.000000 |r2: 0.000094
+ 0.18 s (570.5 images/s) err 85.6 err5 63.4
+validation: epoch 03: processing batch  50 of  50 ... 0.06 s (1594.0 images/s) err 78.4 err5 52.9
+test: epoch 03: processing batch  50 of 100 ... 0.06 s (1637.1 images/s)
+test: epoch 03: processing batch 100 of 100 ... 0.06 s (1587.0 images/s)
+resuming by loading epoch 3
+training: epoch 04: processing batch  50 of 450 ...
+layer 1 ratio | r1: 0.013583 |r2: 0.000015
+layer 4 ratio | r1: -0.000065 |r2: 0.000022
+layer 7 ratio | r1: -0.000195 |r2: 0.000027
+layer 10 ratio | r1: -0.000000 |r2: -0.000009
+ 0.18 s (562.9 images/s) err 83.0 err5 59.1
+training: epoch 04: processing batch 100 of 450 ...
+layer 1 ratio | r1: -0.004496 |r2: 0.000015
+layer 4 ratio | r1: -0.000190 |r2: 0.000023
+layer 7 ratio | r1: 0.000052 |r2: 0.000020
+layer 10 ratio | r1: -0.000000 |r2: -0.000006
+ 0.18 s (566.6 images/s) err 82.6 err5 58.6
+training: epoch 04: processing batch 150 of 450 ...
+layer 1 ratio | r1: 0.001825 |r2: 0.000016
+layer 4 ratio | r1: -0.001354 |r2: 0.000022
+layer 7 ratio | r1: -0.000591 |r2: 0.000024
+layer 10 ratio | r1: -0.000000 |r2: -0.000036
+ 0.18 s (566.2 images/s) err 82.7 err5 59.1
+training: epoch 04: processing batch 200 of 450 ...
+layer 1 ratio | r1: 0.000448 |r2: 0.000012
+layer 4 ratio | r1: 0.000584 |r2: 0.000017
+layer 7 ratio | r1: 0.000134 |r2: 0.000020
+layer 10 ratio | r1: -0.000000 |r2: 0.000684
+ 0.18 s (558.5 images/s) err 82.8 err5 59.2
+training: epoch 04: processing batch 250 of 450 ...
+layer 1 ratio | r1: 0.050683 |r2: 0.000017
+layer 4 ratio | r1: 0.000260 |r2: 0.000018
+layer 7 ratio | r1: -0.000031 |r2: 0.000019
+layer 10 ratio | r1: -0.000000 |r2: 0.000234
+ 0.18 s (551.6 images/s) err 82.7 err5 59.1
+training: epoch 04: processing batch 300 of 450 ...
+layer 1 ratio | r1: -0.002643 |r2: 0.000011
+layer 4 ratio | r1: 0.000767 |r2: 0.000015
+layer 7 ratio | r1: 0.000073 |r2: 0.000020
+layer 10 ratio | r1: -0.000000 |r2: 0.000090
+ 0.18 s (559.0 images/s) err 82.6 err5 59.1
+training: epoch 04: processing batch 350 of 450 ...
+layer 1 ratio | r1: 0.001690 |r2: 0.000011
+layer 4 ratio | r1: -0.000123 |r2: 0.000020
+layer 7 ratio | r1: -0.000127 |r2: 0.000018
+layer 10 ratio | r1: -0.000000 |r2: 0.000091
+ 0.18 s (562.6 images/s) err 82.6 err5 59.1
+training: epoch 04: processing batch 400 of 450 ...
+layer 1 ratio | r1: -0.013010 |r2: 0.000014
+layer 4 ratio | r1: 0.000069 |r2: 0.000019
+layer 7 ratio | r1: 0.000132 |r2: 0.000016
+layer 10 ratio | r1: -0.000000 |r2: 0.000020
+ 0.18 s (557.2 images/s) err 82.5 err5 59.0
+training: epoch 04: processing batch 450 of 450 ...
+layer 1 ratio | r1: 0.000461 |r2: 0.000012
+layer 4 ratio | r1: 0.000325 |r2: 0.000015
+layer 7 ratio | r1: 0.000071 |r2: 0.000015
+layer 10 ratio | r1: -0.000000 |r2: -0.000002
+ 0.19 s (527.0 images/s) err 82.5 err5 58.9
+validation: epoch 04: processing batch  50 of  50 ... 0.06 s (1612.9 images/s) err 77.1 err5 49.4
+test: epoch 04: processing batch  50 of 100 ... 0.06 s (1609.3 images/s)
+test: epoch 04: processing batch 100 of 100 ... 0.06 s (1601.1 images/s)
+resuming by loading epoch 4
+training: epoch 05: processing batch  50 of 450 ...
+layer 1 ratio | r1: 0.005175 |r2: 0.000012
+layer 4 ratio | r1: -0.000373 |r2: 0.000013
+layer 7 ratio | r1: -0.000192 |r2: 0.000016
+layer 10 ratio | r1: -0.000000 |r2: -0.000008
+ 0.18 s (563.4 images/s) err 80.2 err5 55.3
+training: epoch 05: processing batch 100 of 450 ...
+layer 1 ratio | r1: 0.001181 |r2: 0.000014
+layer 4 ratio | r1: -0.000021 |r2: 0.000017
+layer 7 ratio | r1: -0.000182 |r2: 0.000017
+layer 10 ratio | r1: -0.000000 |r2: 0.000013
+ 0.18 s (569.3 images/s) err 80.4 err5 56.0
+training: epoch 05: processing batch 150 of 450 ...
+layer 1 ratio | r1: -0.001625 |r2: 0.000010
+layer 4 ratio | r1: 0.000164 |r2: 0.000013
+layer 7 ratio | r1: 0.000208 |r2: 0.000011
+layer 10 ratio | r1: -0.000000 |r2: 0.000016
+ 0.19 s (540.0 images/s) err 80.6 err5 56.3
+training: epoch 05: processing batch 200 of 450 ...
+layer 1 ratio | r1: 0.001451 |r2: 0.000012
+layer 4 ratio | r1: -0.000552 |r2: 0.000019
+layer 7 ratio | r1: -0.000324 |r2: 0.000018
+layer 10 ratio | r1: -0.000000 |r2: -0.000010
+ 0.18 s (552.7 images/s) err 80.7 err5 56.4
+training: epoch 05: processing batch 250 of 450 ...
+layer 1 ratio | r1: 0.047407 |r2: 0.000004
+layer 4 ratio | r1: 0.000006 |r2: 0.000016
+layer 7 ratio | r1: -0.000024 |r2: 0.000014
+layer 10 ratio | r1: -0.000000 |r2: -0.000002
+ 0.18 s (565.4 images/s) err 80.5 err5 56.1
+training: epoch 05: processing batch 300 of 450 ...
+layer 1 ratio | r1: -0.000595 |r2: 0.000007
+layer 4 ratio | r1: -0.000058 |r2: 0.000017
+layer 7 ratio | r1: -0.000063 |r2: 0.000013
+layer 10 ratio | r1: -0.000000 |r2: 0.000469
+ 0.18 s (562.8 images/s) err 80.3 err5 56.1
+training: epoch 05: processing batch 350 of 450 ...
+layer 1 ratio | r1: -0.002104 |r2: 0.000009
+layer 4 ratio | r1: -0.000062 |r2: 0.000017
+layer 7 ratio | r1: 0.000010 |r2: 0.000011
+layer 10 ratio | r1: -0.000000 |r2: 0.000025
+ 0.18 s (563.4 images/s) err 80.3 err5 56.0
+training: epoch 05: processing batch 400 of 450 ...
+layer 1 ratio | r1: -0.006821 |r2: 0.000008
+layer 4 ratio | r1: -0.000198 |r2: 0.000018
+layer 7 ratio | r1: -0.000028 |r2: 0.000011
+layer 10 ratio | r1: -0.000000 |r2: -0.000013
+ 0.18 s (569.1 images/s) err 80.3 err5 55.8
+training: epoch 05: processing batch 450 of 450 ...
+layer 1 ratio | r1: -0.001837 |r2: 0.000003
+layer 4 ratio | r1: -0.000248 |r2: 0.000020
+layer 7 ratio | r1: 0.000117 |r2: 0.000011
+layer 10 ratio | r1: -0.000000 |r2: 0.000078
+ 0.18 s (560.1 images/s) err 80.2 err5 55.7
+validation: epoch 05: processing batch  50 of  50 ... 0.06 s (1549.8 images/s) err 73.8 err5 45.4
+test: epoch 05: processing batch  50 of 100 ... 0.06 s (1598.4 images/s)
+test: epoch 05: processing batch 100 of 100 ... 0.06 s (1621.4 images/s)
+resuming by loading epoch 5
+training: epoch 06: processing batch  50 of 450 ...
+layer 1 ratio | r1: 0.000297 |r2: 0.000008
+layer 4 ratio | r1: -0.000031 |r2: 0.000016
+layer 7 ratio | r1: 0.000090 |r2: 0.000011
+layer 10 ratio | r1: -0.000000 |r2: 0.000071
+ 0.18 s (565.4 images/s) err 79.4 err5 54.7
+training: epoch 06: processing batch 100 of 450 ...
+layer 1 ratio | r1: -0.001048 |r2: 0.000006
+layer 4 ratio | r1: 0.000010 |r2: 0.000013
+layer 7 ratio | r1: 0.000087 |r2: 0.000009
+layer 10 ratio | r1: -0.000000 |r2: 0.000041
+ 0.18 s (563.8 images/s) err 79.6 err5 54.1
+training: epoch 06: processing batch 150 of 450 ...
+layer 1 ratio | r1: 0.003099 |r2: 0.000002
+layer 4 ratio | r1: 0.000044 |r2: 0.000011
+layer 7 ratio | r1: 0.000132 |r2: 0.000012
+layer 10 ratio | r1: -0.000000 |r2: 0.000027
+ 0.18 s (566.4 images/s) err 79.6 err5 53.7
+training: epoch 06: processing batch 200 of 450 ...
+layer 1 ratio | r1: -0.001351 |r2: 0.000006
+layer 4 ratio | r1: -0.000097 |r2: 0.000014
+layer 7 ratio | r1: 0.000024 |r2: 0.000010
+layer 10 ratio | r1: -0.000000 |r2: -0.000000
+ 0.18 s (554.7 images/s) err 79.4 err5 53.5
+training: epoch 06: processing batch 250 of 450 ...
+layer 1 ratio | r1: -0.003321 |r2: 0.000008
+layer 4 ratio | r1: 0.000239 |r2: 0.000015
+layer 7 ratio | r1: 0.000188 |r2: 0.000009
+layer 10 ratio | r1: -0.000000 |r2: -0.000011
+ 0.18 s (556.1 images/s) err 79.2 err5 53.3
+training: epoch 06: processing batch 300 of 450 ...
+layer 1 ratio | r1: -0.000421 |r2: 0.000005
+layer 4 ratio | r1: 0.000005 |r2: 0.000012
+layer 7 ratio | r1: 0.000016 |r2: 0.000011
+layer 10 ratio | r1: -0.000000 |r2: 0.000073
+ 0.18 s (567.1 images/s) err 79.3 err5 53.2
+training: epoch 06: processing batch 350 of 450 ...
+layer 1 ratio | r1: -0.025715 |r2: 0.000006
+layer 4 ratio | r1: -0.000075 |r2: 0.000011
+layer 7 ratio | r1: -0.000260 |r2: 0.000012
+layer 10 ratio | r1: -0.000000 |r2: -0.000004
+ 0.18 s (559.6 images/s) err 79.2 err5 53.1
+training: epoch 06: processing batch 400 of 450 ...
+layer 1 ratio | r1: -0.007220 |r2: 0.000004
+layer 4 ratio | r1: 0.000078 |r2: 0.000009
+layer 7 ratio | r1: 0.000075 |r2: 0.000009
+layer 10 ratio | r1: -0.000000 |r2: 0.000156
+ 0.18 s (564.6 images/s) err 79.2 err5 53.1
+training: epoch 06: processing batch 450 of 450 ...
+layer 1 ratio | r1: -0.001174 |r2: 0.000008
+layer 4 ratio | r1: 0.000044 |r2: 0.000009
+layer 7 ratio | r1: 0.000113 |r2: 0.000010
+layer 10 ratio | r1: -0.000000 |r2: 0.000020
+ 0.18 s (552.0 images/s) err 79.1 err5 52.9
+validation: epoch 06: processing batch  50 of  50 ... 0.06 s (1623.5 images/s) err 72.2 err5 43.3
+test: epoch 06: processing batch  50 of 100 ... 0.06 s (1578.1 images/s)
+test: epoch 06: processing batch 100 of 100 ... 0.06 s (1610.6 images/s)
+resuming by loading epoch 6
+training: epoch 07: processing batch  50 of 450 ...
+layer 1 ratio | r1: 0.001297 |r2: 0.000005
+layer 4 ratio | r1: -0.000056 |r2: 0.000010
+layer 7 ratio | r1: -0.000094 |r2: 0.000009
+layer 10 ratio | r1: -0.000000 |r2: -0.000000
+ 0.18 s (564.1 images/s) err 77.8 err5 51.5
+training: epoch 07: processing batch 100 of 450 ...
+layer 1 ratio | r1: 0.006907 |r2: 0.000003
+layer 4 ratio | r1: -0.000036 |r2: 0.000012
+layer 7 ratio | r1: -0.000223 |r2: 0.000011
+layer 10 ratio | r1: -0.000000 |r2: 0.000033
+ 0.18 s (561.6 images/s) err 78.1 err5 51.3
+training: epoch 07: processing batch 150 of 450 ...
+layer 1 ratio | r1: -0.006885 |r2: 0.000004
+layer 4 ratio | r1: 0.000085 |r2: 0.000008
+layer 7 ratio | r1: -0.000019 |r2: 0.000008
+layer 10 ratio | r1: -0.000000 |r2: 0.000027
+ 0.18 s (570.2 images/s) err 77.8 err5 51.2
+training: epoch 07: processing batch 200 of 450 ...
+layer 1 ratio | r1: 0.002116 |r2: 0.000007
+layer 4 ratio | r1: -0.000159 |r2: 0.000010
+layer 7 ratio | r1: -0.000171 |r2: 0.000011
+layer 10 ratio | r1: -0.000000 |r2: -0.000000
+ 0.18 s (565.9 images/s) err 77.8 err5 51.2
+training: epoch 07: processing batch 250 of 450 ...
+layer 1 ratio | r1: -0.006301 |r2: -0.000001
+layer 4 ratio | r1: 0.000172 |r2: 0.000006
+layer 7 ratio | r1: 0.000161 |r2: 0.000007
+layer 10 ratio | r1: -0.000000 |r2: 0.000026
+ 0.18 s (567.6 images/s) err 77.8 err5 51.1
+training: epoch 07: processing batch 300 of 450 ...
+layer 1 ratio | r1: 0.044323 |r2: 0.000005
+layer 4 ratio | r1: -0.000155 |r2: 0.000012
+layer 7 ratio | r1: -0.000094 |r2: 0.000008
+layer 10 ratio | r1: -0.000000 |r2: -0.000000
+ 0.19 s (532.7 images/s) err 77.6 err5 51.1
+training: epoch 07: processing batch 350 of 450 ...
+layer 1 ratio | r1: -0.007106 |r2: 0.000001
+layer 4 ratio | r1: -0.000133 |r2: 0.000009
+layer 7 ratio | r1: -0.000084 |r2: 0.000009
+layer 10 ratio | r1: -0.000000 |r2: -0.000026
+ 0.18 s (569.9 images/s) err 77.4 err5 51.1
+training: epoch 07: processing batch 400 of 450 ...
+layer 1 ratio | r1: 0.000083 |r2: 0.000005
+layer 4 ratio | r1: -0.000068 |r2: 0.000008
+layer 7 ratio | r1: -0.000132 |r2: 0.000009
+layer 10 ratio | r1: -0.000000 |r2: -0.000078
+ 0.18 s (570.9 images/s) err 77.4 err5 50.9
+training: epoch 07: processing batch 450 of 450 ...
+layer 1 ratio | r1: -0.003889 |r2: -0.000000
+layer 4 ratio | r1: 0.000010 |r2: 0.000007
+layer 7 ratio | r1: -0.000044 |r2: 0.000008
+layer 10 ratio | r1: -0.000000 |r2: 0.000065
+ 0.17 s (578.0 images/s) err 77.3 err5 50.7
+validation: epoch 07: processing batch  50 of  50 ... 0.06 s (1642.6 images/s) err 68.8 err5 40.6
+test: epoch 07: processing batch  50 of 100 ... 0.06 s (1646.5 images/s)
+test: epoch 07: processing batch 100 of 100 ... 0.06 s (1640.9 images/s)
+resuming by loading epoch 7
+training: epoch 08: processing batch  50 of 450 ...
+layer 1 ratio | r1: 0.028102 |r2: 0.000002
+layer 4 ratio | r1: 0.000085 |r2: 0.000008
+layer 7 ratio | r1: 0.000143 |r2: 0.000006
+layer 10 ratio | r1: -0.000000 |r2: 0.000020
+ 0.18 s (570.1 images/s) err 75.8 err5 48.5
+training: epoch 08: processing batch 100 of 450 ...
+layer 1 ratio | r1: 0.000489 |r2: 0.000004
+layer 4 ratio | r1: 0.000001 |r2: 0.000011
+layer 7 ratio | r1: -0.000105 |r2: 0.000008
+layer 10 ratio | r1: -0.000000 |r2: -0.000010
+ 0.17 s (579.1 images/s) err 76.1 err5 48.9
+training: epoch 08: processing batch 150 of 450 ...
+layer 1 ratio | r1: 0.046216 |r2: -0.000002
+layer 4 ratio | r1: -0.000019 |r2: 0.000012
+layer 7 ratio | r1: 0.000043 |r2: 0.000006
+layer 10 ratio | r1: -0.000000 |r2: -0.000014
+ 0.18 s (568.2 images/s) err 75.7 err5 49.0
+training: epoch 08: processing batch 200 of 450 ...
+layer 1 ratio | r1: -0.027053 |r2: -0.000003
+layer 4 ratio | r1: 0.000056 |r2: 0.000010
+layer 7 ratio | r1: -0.000098 |r2: 0.000008
+layer 10 ratio | r1: -0.000000 |r2: -0.000098
+ 0.17 s (573.6 images/s) err 75.9 err5 49.3
+training: epoch 08: processing batch 250 of 450 ...
+layer 1 ratio | r1: 0.058685 |r2: -0.000001
+layer 4 ratio | r1: 0.000080 |r2: 0.000009
+layer 7 ratio | r1: 0.000053 |r2: 0.000007
+layer 10 ratio | r1: -0.000000 |r2: -0.000014
+ 0.17 s (574.5 images/s) err 76.0 err5 49.4
+training: epoch 08: processing batch 300 of 450 ...
+layer 1 ratio | r1: 0.000553 |r2: -0.000001
+layer 4 ratio | r1: -0.000099 |r2: 0.000009
+layer 7 ratio | r1: -0.000166 |r2: 0.000008
+layer 10 ratio | r1: -0.000000 |r2: -0.000078
+ 0.17 s (579.8 images/s) err 75.9 err5 49.2
+training: epoch 08: processing batch 350 of 450 ...
+layer 1 ratio | r1: -0.005715 |r2: 0.000001
+layer 4 ratio | r1: -0.000135 |r2: 0.000008
+layer 7 ratio | r1: -0.000178 |r2: 0.000008
+layer 10 ratio | r1: -0.000000 |r2: -0.000036
+ 0.18 s (555.3 images/s) err 75.9 err5 49.1
+training: epoch 08: processing batch 400 of 450 ...
+layer 1 ratio | r1: 0.067483 |r2: -0.000003
+layer 4 ratio | r1: -0.000014 |r2: 0.000012
+layer 7 ratio | r1: 0.000014 |r2: 0.000007
+layer 10 ratio | r1: -0.000000 |r2: -0.000039
+ 0.18 s (570.8 images/s) err 75.8 err5 49.0
+training: epoch 08: processing batch 450 of 450 ...
+layer 1 ratio | r1: 0.002730 |r2: -0.000004
+layer 4 ratio | r1: 0.000094 |r2: 0.000008
+layer 7 ratio | r1: -0.000034 |r2: 0.000006
+layer 10 ratio | r1: -0.000000 |r2: 0.000039
+ 0.17 s (574.6 images/s) err 75.9 err5 49.1
+validation: epoch 08: processing batch  50 of  50 ... 0.06 s (1641.8 images/s) err 68.9 err5 38.3
+test: epoch 08: processing batch  50 of 100 ... 0.06 s (1628.5 images/s)
+test: epoch 08: processing batch 100 of 100 ... 0.06 s (1645.9 images/s)
+resuming by loading epoch 8
+training: epoch 09: processing batch  50 of 450 ...
+layer 1 ratio | r1: 0.022863 |r2: 0.000006
+layer 4 ratio | r1: 0.000042 |r2: 0.000008
+layer 7 ratio | r1: 0.000042 |r2: 0.000008
+layer 10 ratio | r1: -0.000000 |r2: -Inf
+ 0.17 s (572.3 images/s) err 74.3 err5 47.0
+training: epoch 09: processing batch 100 of 450 ...
+layer 1 ratio | r1: -0.022126 |r2: -0.000002
+layer 4 ratio | r1: 0.000117 |r2: 0.000006
+layer 7 ratio | r1: -0.000076 |r2: 0.000006
+layer 10 ratio | r1: -0.000000 |r2: 0.000059
+ 0.17 s (572.6 images/s) err 75.0 err5 47.5
+training: epoch 09: processing batch 150 of 450 ...
+layer 1 ratio | r1: -0.004561 |r2: 0.000004
+layer 4 ratio | r1: -0.000069 |r2: 0.000009
+layer 7 ratio | r1: 0.000016 |r2: 0.000007
+layer 10 ratio | r1: -0.000000 |r2: 0.000820
+ 0.18 s (563.9 images/s) err 75.3 err5 47.6
+training: epoch 09: processing batch 200 of 450 ...
+layer 1 ratio | r1: -0.003593 |r2: -0.000003
+layer 4 ratio | r1: 0.000038 |r2: 0.000008
+layer 7 ratio | r1: 0.000174 |r2: 0.000005
+layer 10 ratio | r1: -0.000000 |r2: -0.000012
+ 0.18 s (567.8 images/s) err 75.1 err5 47.6
+training: epoch 09: processing batch 250 of 450 ...
+layer 1 ratio | r1: -0.001608 |r2: -0.000003
+layer 4 ratio | r1: 0.000051 |r2: 0.000008
+layer 7 ratio | r1: 0.000131 |r2: 0.000005
+layer 10 ratio | r1: -0.000000 |r2: -0.000000
+ 0.18 s (571.1 images/s) err 74.9 err5 47.5
+training: epoch 09: processing batch 300 of 450 ...
+layer 1 ratio | r1: 0.004164 |r2: -0.000001
+layer 4 ratio | r1: -0.000119 |r2: 0.000008
+layer 7 ratio | r1: -0.000009 |r2: 0.000007
+layer 10 ratio | r1: -0.000000 |r2: 0.000000
+ 0.18 s (571.1 images/s) err 74.7 err5 47.3
+training: epoch 09: processing batch 350 of 450 ...
+layer 1 ratio | r1: -0.000585 |r2: -0.000005
+layer 4 ratio | r1: -0.000094 |r2: 0.000008
+layer 7 ratio | r1: 0.000075 |r2: 0.000005
+layer 10 ratio | r1: -0.000000 |r2: -0.000029
+ 0.18 s (560.3 images/s) err 74.8 err5 47.4
+training: epoch 09: processing batch 400 of 450 ...
+layer 1 ratio | r1: 0.000994 |r2: -0.000003
+layer 4 ratio | r1: -0.000126 |r2: 0.000009
+layer 7 ratio | r1: 0.000055 |r2: 0.000006
+layer 10 ratio | r1: -0.000000 |r2: 0.000031
+ 0.17 s (571.7 images/s) err 74.7 err5 47.3
+training: epoch 09: processing batch 450 of 450 ...
+layer 1 ratio | r1: 0.003126 |r2: 0.000003
+layer 4 ratio | r1: 0.000052 |r2: 0.000005
+layer 7 ratio | r1: 0.000086 |r2: 0.000007
+layer 10 ratio | r1: -0.000000 |r2: 0.000015
+ 0.18 s (571.0 images/s) err 74.6 err5 47.3
+validation: epoch 09: processing batch  50 of  50 ... 0.06 s (1643.7 images/s) err 67.0 err5 37.2
+test: epoch 09: processing batch  50 of 100 ... 0.06 s (1640.5 images/s)
+test: epoch 09: processing batch 100 of 100 ... 0.06 s (1642.7 images/s)
+resuming by loading epoch 9
+training: epoch 10: processing batch  50 of 450 ...
+layer 1 ratio | r1: -0.005022 |r2: -0.000006
+layer 4 ratio | r1: -0.000085 |r2: 0.000006
+layer 7 ratio | r1: 0.000013 |r2: 0.000006
+layer 10 ratio | r1: -0.000000 |r2: 0.000000
+ 0.18 s (565.4 images/s) err 73.6 err5 45.7
+training: epoch 10: processing batch 100 of 450 ...
+layer 1 ratio | r1: 0.038301 |r2: -0.000001
+layer 4 ratio | r1: 0.000087 |r2: 0.000004
+layer 7 ratio | r1: -0.000010 |r2: 0.000005
+layer 10 ratio | r1: -0.000000 |r2: -0.000023
+ 0.17 s (580.4 images/s) err 73.5 err5 45.8
+training: epoch 10: processing batch 150 of 450 ...
+layer 1 ratio | r1: 0.003341 |r2: -0.000006
+layer 4 ratio | r1: -0.000180 |r2: 0.000007
+layer 7 ratio | r1: -0.000073 |r2: 0.000006
+layer 10 ratio | r1: -0.000000 |r2: -0.000007
+ 0.18 s (570.9 images/s) err 73.1 err5 45.5
+training: epoch 10: processing batch 200 of 450 ...
+layer 1 ratio | r1: 0.000141 |r2: -0.000007
+layer 4 ratio | r1: 0.000055 |r2: 0.000007
+layer 7 ratio | r1: -0.000096 |r2: 0.000006
+layer 10 ratio | r1: -0.000000 |r2: 0.000023
+ 0.18 s (565.3 images/s) err 73.4 err5 45.8
+training: epoch 10: processing batch 250 of 450 ...
+layer 1 ratio | r1: 0.003216 |r2: 0.000001
+layer 4 ratio | r1: 0.000047 |r2: 0.000006
+layer 7 ratio | r1: -0.000045 |r2: 0.000006
+layer 10 ratio | r1: -0.000000 |r2: 0.000020
+ 0.18 s (570.9 images/s) err 73.7 err5 46.2
+training: epoch 10: processing batch 300 of 450 ...
+layer 1 ratio | r1: 0.002521 |r2: -0.000008
+layer 4 ratio | r1: -0.000095 |r2: 0.000004
+layer 7 ratio | r1: 0.000083 |r2: 0.000005
+layer 10 ratio | r1: -0.000000 |r2: 0.000011
+ 0.17 s (573.2 images/s) err 73.8 err5 46.3
+training: epoch 10: processing batch 350 of 450 ...
+layer 1 ratio | r1: -0.010282 |r2: -0.000000
+layer 4 ratio | r1: 0.000145 |r2: 0.000006
+layer 7 ratio | r1: 0.000106 |r2: 0.000004
+layer 10 ratio | r1: -0.000000 |r2: 0.000003
+ 0.18 s (571.1 images/s) err 73.8 err5 46.4
+training: epoch 10: processing batch 400 of 450 ...
+layer 1 ratio | r1: -0.305907 |r2: -0.000001
+layer 4 ratio | r1: -0.000009 |r2: 0.000006
+layer 7 ratio | r1: -0.000075 |r2: 0.000006
+layer 10 ratio | r1: -0.000000 |r2: 0.000003
+ 0.18 s (569.3 images/s) err 73.8 err5 46.4
+training: epoch 10: processing batch 450 of 450 ...
+layer 1 ratio | r1: -0.023251 |r2: -0.000003
+layer 4 ratio | r1: -0.000036 |r2: 0.000006
+layer 7 ratio | r1: 0.000040 |r2: 0.000005
+layer 10 ratio | r1: -0.000000 |r2: -0.000023
+ 0.17 s (572.6 images/s) err 73.8 err5 46.5
+validation: epoch 10: processing batch  50 of  50 ... 0.06 s (1599.9 images/s) err 66.5 err5 37.2
+test: epoch 10: processing batch  50 of 100 ... 0.06 s (1620.8 images/s)
+test: epoch 10: processing batch 100 of 100 ... 0.06 s (1631.7 images/s)
+resuming by loading epoch 10
+learning rate changed (0.001000 --> 0.000100): resetting momentum
+training: epoch 11: processing batch  50 of 450 ...
+layer 1 ratio | r1: 0.000493 |r2: 0.000000
+layer 4 ratio | r1: -0.000011 |r2: 0.000001
+layer 7 ratio | r1: -0.000006 |r2: 0.000001
+layer 10 ratio | r1: -0.000000 |r2: -0.000001
+ 0.18 s (570.8 images/s) err 71.4 err5 44.2
+training: epoch 11: processing batch 100 of 450 ...
+layer 1 ratio | r1: 0.001729 |r2: 0.000000
+layer 4 ratio | r1: 0.000005 |r2: 0.000000
+layer 7 ratio | r1: -0.000001 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000001
+ 0.17 s (576.0 images/s) err 70.9 err5 43.2
+training: epoch 11: processing batch 150 of 450 ...
+layer 1 ratio | r1: -0.000216 |r2: 0.000001
+layer 4 ratio | r1: -0.000005 |r2: 0.000001
+layer 7 ratio | r1: -0.000004 |r2: 0.000001
+layer 10 ratio | r1: -0.000000 |r2: 0.000002
+ 0.17 s (576.2 images/s) err 70.5 err5 42.7
+training: epoch 11: processing batch 200 of 450 ...
+layer 1 ratio | r1: 0.000054 |r2: 0.000001
+layer 4 ratio | r1: 0.000001 |r2: 0.000001
+layer 7 ratio | r1: 0.000005 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000000
+ 0.18 s (569.3 images/s) err 70.3 err5 42.8
+training: epoch 11: processing batch 250 of 450 ...
+layer 1 ratio | r1: -0.001005 |r2: 0.000000
+layer 4 ratio | r1: 0.000005 |r2: 0.000001
+layer 7 ratio | r1: 0.000000 |r2: 0.000001
+layer 10 ratio | r1: -0.000000 |r2: -0.000000
+ 0.18 s (547.1 images/s) err 70.1 err5 42.7
+training: epoch 11: processing batch 300 of 450 ...
+layer 1 ratio | r1: 0.000517 |r2: 0.000001
+layer 4 ratio | r1: -0.000017 |r2: 0.000001
+layer 7 ratio | r1: -0.000020 |r2: 0.000001
+layer 10 ratio | r1: -0.000000 |r2: 0.000000
+ 0.17 s (576.8 images/s) err 70.0 err5 42.4
+training: epoch 11: processing batch 350 of 450 ...
+layer 1 ratio | r1: 0.002412 |r2: 0.000000
+layer 4 ratio | r1: 0.000003 |r2: 0.000001
+layer 7 ratio | r1: 0.000001 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000001
+ 0.18 s (569.1 images/s) err 69.9 err5 42.4
+training: epoch 11: processing batch 400 of 450 ...
+layer 1 ratio | r1: 0.001779 |r2: 0.000001
+layer 4 ratio | r1: -0.000001 |r2: 0.000001
+layer 7 ratio | r1: -0.000015 |r2: 0.000001
+layer 10 ratio | r1: -0.000000 |r2: -0.000000
+ 0.18 s (556.1 images/s) err 69.8 err5 42.3
+training: epoch 11: processing batch 450 of 450 ...
+layer 1 ratio | r1: -0.001513 |r2: 0.000000
+layer 4 ratio | r1: -0.000007 |r2: 0.000001
+layer 7 ratio | r1: -0.000006 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: -0.000000
+ 0.18 s (563.4 images/s) err 69.8 err5 42.3
+validation: epoch 11: processing batch  50 of  50 ... 0.06 s (1637.7 images/s) err 62.3 err5 33.3
+test: epoch 11: processing batch  50 of 100 ... 0.06 s (1638.4 images/s)
+test: epoch 11: processing batch 100 of 100 ... 0.06 s (1622.9 images/s)
+resuming by loading epoch 11
+training: epoch 12: processing batch  50 of 450 ...
+layer 1 ratio | r1: -0.000422 |r2: 0.000000
+layer 4 ratio | r1: 0.000004 |r2: 0.000001
+layer 7 ratio | r1: 0.000002 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000000
+ 0.17 s (571.8 images/s) err 69.1 err5 41.3
+training: epoch 12: processing batch 100 of 450 ...
+layer 1 ratio | r1: 0.000104 |r2: 0.000001
+layer 4 ratio | r1: 0.000009 |r2: 0.000001
+layer 7 ratio | r1: -0.000001 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: -0.000000
+ 0.18 s (570.7 images/s) err 69.0 err5 41.7
+training: epoch 12: processing batch 150 of 450 ...
+layer 1 ratio | r1: -0.001952 |r2: -0.000000
+layer 4 ratio | r1: -0.000007 |r2: 0.000001
+layer 7 ratio | r1: 0.000010 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000000
+ 0.17 s (573.1 images/s) err 69.1 err5 41.2
+training: epoch 12: processing batch 200 of 450 ...
+layer 1 ratio | r1: -0.046827 |r2: 0.000000
+layer 4 ratio | r1: -0.000008 |r2: 0.000001
+layer 7 ratio | r1: -0.000002 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: -0.000001
+ 0.17 s (575.4 images/s) err 69.2 err5 41.6
+training: epoch 12: processing batch 250 of 450 ...
+layer 1 ratio | r1: -0.000514 |r2: 0.000001
+layer 4 ratio | r1: 0.000001 |r2: 0.000000
+layer 7 ratio | r1: 0.000001 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000001
+ 0.18 s (561.4 images/s) err 69.3 err5 41.8
+training: epoch 12: processing batch 300 of 450 ...
+layer 1 ratio | r1: 0.000577 |r2: 0.000000
+layer 4 ratio | r1: 0.000009 |r2: 0.000001
+layer 7 ratio | r1: -0.000008 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000000
+ 0.17 s (579.9 images/s) err 69.3 err5 41.8
+training: epoch 12: processing batch 350 of 450 ...
+layer 1 ratio | r1: 0.000456 |r2: 0.000000
+layer 4 ratio | r1: -0.000006 |r2: 0.000001
+layer 7 ratio | r1: -0.000004 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: -0.000001
+ 0.18 s (571.2 images/s) err 69.2 err5 41.7
+training: epoch 12: processing batch 400 of 450 ...
+layer 1 ratio | r1: -0.000773 |r2: 0.000000
+layer 4 ratio | r1: -0.000005 |r2: 0.000001
+layer 7 ratio | r1: 0.000001 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: -0.000000
+ 0.17 s (578.6 images/s) err 69.0 err5 41.6
+training: epoch 12: processing batch 450 of 450 ...
+layer 1 ratio | r1: -0.040808 |r2: 0.000001
+layer 4 ratio | r1: -0.000012 |r2: 0.000001
+layer 7 ratio | r1: 0.000000 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: -0.000001
+ 0.17 s (573.7 images/s) err 69.0 err5 41.6
+validation: epoch 12: processing batch  50 of  50 ... 0.06 s (1569.1 images/s) err 62.2 err5 32.7
+test: epoch 12: processing batch  50 of 100 ... 0.06 s (1642.0 images/s)
+test: epoch 12: processing batch 100 of 100 ... 0.08 s (1257.6 images/s)
+resuming by loading epoch 12
+training: epoch 13: processing batch  50 of 450 ...
+layer 1 ratio | r1: 0.000477 |r2: 0.000001
+layer 4 ratio | r1: 0.000003 |r2: 0.000001
+layer 7 ratio | r1: -0.000004 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: -0.000000
+ 0.18 s (558.6 images/s) err 69.1 err5 41.6
+training: epoch 13: processing batch 100 of 450 ...
+layer 1 ratio | r1: -0.000286 |r2: -0.000000
+layer 4 ratio | r1: 0.000002 |r2: 0.000001
+layer 7 ratio | r1: 0.000018 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000003
+ 0.17 s (571.7 images/s) err 69.0 err5 41.5
+training: epoch 13: processing batch 150 of 450 ...
+layer 1 ratio | r1: 0.000532 |r2: 0.000000
+layer 4 ratio | r1: 0.000010 |r2: 0.000001
+layer 7 ratio | r1: -0.000009 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000003
+ 0.18 s (556.5 images/s) err 69.1 err5 41.5
+training: epoch 13: processing batch 200 of 450 ...
+layer 1 ratio | r1: -0.002027 |r2: 0.000000
+layer 4 ratio | r1: -0.000006 |r2: 0.000001
+layer 7 ratio | r1: -0.000018 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000004
+ 0.17 s (575.0 images/s) err 69.1 err5 41.9
+training: epoch 13: processing batch 250 of 450 ...
+layer 1 ratio | r1: 0.002258 |r2: -0.000000
+layer 4 ratio | r1: -0.000012 |r2: 0.000001
+layer 7 ratio | r1: 0.000012 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000017
+ 0.17 s (572.7 images/s) err 69.0 err5 41.9
+training: epoch 13: processing batch 300 of 450 ...
+layer 1 ratio | r1: -0.008008 |r2: 0.000001
+layer 4 ratio | r1: -0.000001 |r2: 0.000001
+layer 7 ratio | r1: 0.000010 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000004
+ 0.17 s (574.3 images/s) err 68.8 err5 41.6
+training: epoch 13: processing batch 350 of 450 ...
+layer 1 ratio | r1: 0.004289 |r2: 0.000001
+layer 4 ratio | r1: 0.000006 |r2: 0.000001
+layer 7 ratio | r1: -0.000001 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000001
+ 0.17 s (572.1 images/s) err 68.8 err5 41.7
+training: epoch 13: processing batch 400 of 450 ...
+layer 1 ratio | r1: 0.002138 |r2: 0.000000
+layer 4 ratio | r1: 0.000017 |r2: 0.000001
+layer 7 ratio | r1: -0.000005 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000002
+ 0.18 s (561.4 images/s) err 68.8 err5 41.6
+training: epoch 13: processing batch 450 of 450 ...
+layer 1 ratio | r1: -0.001935 |r2: 0.000001
+layer 4 ratio | r1: -0.000007 |r2: 0.000001
+layer 7 ratio | r1: 0.000002 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000000
+ 0.18 s (568.9 images/s) err 68.7 err5 41.6
+validation: epoch 13: processing batch  50 of  50 ... 0.06 s (1581.0 images/s) err 61.8 err5 32.5
+test: epoch 13: processing batch  50 of 100 ... 0.06 s (1553.4 images/s)
+test: epoch 13: processing batch 100 of 100 ... 0.06 s (1639.2 images/s)
+resuming by loading epoch 13
+training: epoch 14: processing batch  50 of 450 ...
+layer 1 ratio | r1: 0.000089 |r2: 0.000000
+layer 4 ratio | r1: -0.000017 |r2: 0.000001
+layer 7 ratio | r1: -0.000003 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: -0.000001
+ 0.17 s (572.6 images/s) err 69.2 err5 41.5
+training: epoch 14: processing batch 100 of 450 ...
+layer 1 ratio | r1: -0.001380 |r2: 0.000000
+layer 4 ratio | r1: 0.000009 |r2: 0.000001
+layer 7 ratio | r1: -0.000005 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: -0.000003
+ 0.18 s (564.6 images/s) err 68.6 err5 41.2
+training: epoch 14: processing batch 150 of 450 ...
+layer 1 ratio | r1: 0.009302 |r2: 0.000000
+layer 4 ratio | r1: -0.000014 |r2: 0.000001
+layer 7 ratio | r1: -0.000007 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: -0.000005
+ 0.17 s (575.3 images/s) err 68.6 err5 41.0
+training: epoch 14: processing batch 200 of 450 ...
+layer 1 ratio | r1: -0.000101 |r2: 0.000001
+layer 4 ratio | r1: -0.000003 |r2: 0.000001
+layer 7 ratio | r1: -0.000014 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000004
+ 0.18 s (547.8 images/s) err 68.4 err5 41.1
+training: epoch 14: processing batch 250 of 450 ...
+layer 1 ratio | r1: 0.001378 |r2: 0.000001
+layer 4 ratio | r1: -0.000003 |r2: 0.000001
+layer 7 ratio | r1: -0.000016 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: -0.000000
+ 0.18 s (558.5 images/s) err 68.4 err5 41.4
+training: epoch 14: processing batch 300 of 450 ...
+layer 1 ratio | r1: 0.001201 |r2: 0.000001
+layer 4 ratio | r1: 0.000006 |r2: 0.000001
+layer 7 ratio | r1: -0.000002 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000003
+ 0.17 s (572.1 images/s) err 68.4 err5 41.4
+training: epoch 14: processing batch 350 of 450 ...
+layer 1 ratio | r1: -0.001321 |r2: 0.000000
+layer 4 ratio | r1: 0.000002 |r2: 0.000001
+layer 7 ratio | r1: 0.000010 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000001
+ 0.17 s (572.9 images/s) err 68.4 err5 41.4
+training: epoch 14: processing batch 400 of 450 ...
+layer 1 ratio | r1: -0.011179 |r2: 0.000000
+layer 4 ratio | r1: -0.000009 |r2: 0.000001
+layer 7 ratio | r1: -0.000024 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000000
+ 0.18 s (554.9 images/s) err 68.5 err5 41.4
+training: epoch 14: processing batch 450 of 450 ...
+layer 1 ratio | r1: 0.000973 |r2: 0.000000
+layer 4 ratio | r1: -0.000009 |r2: 0.000001
+layer 7 ratio | r1: -0.000002 |r2: 0.000001
+layer 10 ratio | r1: -0.000000 |r2: 0.000000
+ 0.18 s (564.9 images/s) err 68.4 err5 41.3
+validation: epoch 14: processing batch  50 of  50 ... 0.06 s (1589.0 images/s) err 61.3 err5 31.9
+test: epoch 14: processing batch  50 of 100 ... 0.06 s (1626.4 images/s)
+test: epoch 14: processing batch 100 of 100 ... 0.06 s (1633.8 images/s)
+resuming by loading epoch 14
+training: epoch 15: processing batch  50 of 450 ...
+layer 1 ratio | r1: 0.001145 |r2: 0.000001
+layer 4 ratio | r1: 0.000009 |r2: 0.000000
+layer 7 ratio | r1: -0.000005 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000000
+ 0.17 s (578.0 images/s) err 68.3 err5 40.8
+training: epoch 15: processing batch 100 of 450 ...
+layer 1 ratio | r1: 0.000893 |r2: 0.000001
+layer 4 ratio | r1: 0.000010 |r2: 0.000001
+layer 7 ratio | r1: 0.000005 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000000
+ 0.18 s (563.6 images/s) err 68.0 err5 40.4
+training: epoch 15: processing batch 150 of 450 ...
+layer 1 ratio | r1: 0.001544 |r2: 0.000001
+layer 4 ratio | r1: -0.000001 |r2: 0.000001
+layer 7 ratio | r1: -0.000010 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: -0.000000
+ 0.20 s (510.7 images/s) err 68.0 err5 40.2
+training: epoch 15: processing batch 200 of 450 ...
+layer 1 ratio | r1: 0.000474 |r2: 0.000001
+layer 4 ratio | r1: 0.000002 |r2: 0.000001
+layer 7 ratio | r1: -0.000005 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000000
+ 0.17 s (571.4 images/s) err 67.8 err5 40.1
+training: epoch 15: processing batch 250 of 450 ...
+layer 1 ratio | r1: 0.001078 |r2: 0.000000
+layer 4 ratio | r1: 0.000011 |r2: 0.000001
+layer 7 ratio | r1: 0.000004 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: -0.000000
+ 0.17 s (576.7 images/s) err 68.0 err5 40.5
+training: epoch 15: processing batch 300 of 450 ...
+layer 1 ratio | r1: -0.000413 |r2: 0.000001
+layer 4 ratio | r1: -0.000018 |r2: 0.000001
+layer 7 ratio | r1: -0.000001 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000000
+ 0.18 s (570.3 images/s) err 67.9 err5 40.4
+training: epoch 15: processing batch 350 of 450 ...
+layer 1 ratio | r1: -0.000631 |r2: 0.000000
+layer 4 ratio | r1: -0.000012 |r2: 0.000001
+layer 7 ratio | r1: 0.000012 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: -0.000001
+ 0.19 s (523.1 images/s) err 67.8 err5 40.4
+training: epoch 15: processing batch 400 of 450 ...
+layer 1 ratio | r1: -0.000739 |r2: 0.000000
+layer 4 ratio | r1: -0.000004 |r2: 0.000001
+layer 7 ratio | r1: 0.000006 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: 0.000001
+ 0.17 s (576.6 images/s) err 68.0 err5 40.5
+training: epoch 15: processing batch 450 of 450 ...
+layer 1 ratio | r1: 0.000717 |r2: 0.000000
+layer 4 ratio | r1: -0.000000 |r2: 0.000001
+layer 7 ratio | r1: -0.000002 |r2: 0.000000
+layer 10 ratio | r1: -0.000000 |r2: -0.000000
+ 0.18 s (567.1 images/s) err 68.0 err5 40.6
+validation: epoch 15: processing batch  50 of  50 ... 0.06 s (1627.9 images/s) err 61.4 err5 32.6
+test: epoch 15: processing batch  50 of 100 ... 0.06 s (1633.6 images/s)
+test: epoch 15: processing batch 100 of 100 ... 0.06 s (1631.9 images/s)
+Elapsed time is 1313.805972 seconds.
